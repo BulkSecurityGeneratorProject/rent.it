@@ -4,7 +4,7 @@
 https://trello.com/b/mT3x7tcr/lend-it-tasks
 
 ### CI server
-[ ![Codeship Status for intercity/chef-repo](https://codeship.io/projects/52b21290-dec8-0132-3672-465ff4e7e511/status)](https://codeship.io/projects/80440)
+[ ![Codeship Status for intercity/chef-repo](https://codeship.io/projects/a9c60310-f8fa-0133-a8ad-268d110da048/status)](https://codeship.io/projects/80440)
 
 ### Sonar
 docker-compose -f src/main/docker/sonar.yml up
