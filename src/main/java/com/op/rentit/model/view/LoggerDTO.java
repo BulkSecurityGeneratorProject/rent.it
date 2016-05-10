@@ -1,4 +1,4 @@
-package com.op.lendit.model.view;
+package com.op.rentit.model.view;
 
 import ch.qos.logback.classic.Logger;
 import com.fasterxml.jackson.annotation.JsonCreator;

@@ -1,4 +1,4 @@
-package com.op.lendit;
+package com.op.rentit;
 
 public class Constants {
     public static final String SPRING_PROFILE_DEVELOPMENT = "dev";

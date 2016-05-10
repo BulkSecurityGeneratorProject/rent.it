@@ -1,4 +1,4 @@
-package com.op.lendit.exception;
+package com.op.rentit.exception;
 
 public final class ErrorConstants {
 

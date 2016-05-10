@@ -1,9 +1,9 @@
-package com.op.lendit.controller;
+package com.op.rentit.controller;
 
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;
-import com.op.lendit.model.view.LoggerDTO;
+import com.op.rentit.model.view.LoggerDTO;
 import io.swagger.annotations.Api;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

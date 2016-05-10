@@ -1,6 +1,6 @@
-package com.op.lendit.logging;
+package com.op.rentit.logging;
 
-import com.op.lendit.Constants;
+import com.op.rentit.Constants;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -25,7 +25,7 @@ public class LoggingAspect {
     @Inject
     private Environment env;
 
-    @Pointcut("within(com.op.lendit.manager.repository.*) || within(com.op.lendit.service..*) || within(com.op.lendit.controller..*)")
+    @Pointcut("within(com.op.rentit.manager.repository.*) || within(com.op.rentit.service..*) || within(com.op.rentit.controller..*)")
     public void loggingPointcut() {
     }
 

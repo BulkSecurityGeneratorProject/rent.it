@@ -1,4 +1,4 @@
-package com.op.lendit.model.db;
+package com.op.rentit.model.db;
 
 import lombok.Data;
 
