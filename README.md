@@ -43,5 +43,5 @@ Application to lend any stuff.
 * Deployment instructions
 
 ### LICENSE 
-(http://opensource.org/licenses/GPL-3.0)
+![License GPL-3](http://img.shields.io/:license-gpl2-blue.svg?style=flat-square)](http://opensource.org/licenses/GPL-3.0)
 
