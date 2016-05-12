@@ -23,7 +23,6 @@ you could add custom metrics
 
 ### Code coverage
 [![Coverage Status](https://coveralls.io/repos/github/picaro/rent.it/badge.svg?branch=master)](https://coveralls.io/github/picaro/rent.it?branch=master)
-(https://coveralls.io/repos/github/picaro/rent.it/badge.svg?branch=master)
 ![GitHub Logo](https://coveralls.io/repos/github/picaro/rent.it/badge.svg?branch=master)Format: ![Alt Text](url)
 
 mvn cobertura:cobertura coveralls:report
