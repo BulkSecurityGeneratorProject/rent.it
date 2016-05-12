@@ -42,4 +42,6 @@ Application to lend any stuff.
 * How to run tests
 * Deployment instructions
 
+### LICENSE 
+(http://opensource.org/licenses/GPL-3.0)
 
