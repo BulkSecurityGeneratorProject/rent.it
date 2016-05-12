@@ -1,6 +1,7 @@
 package com.op.rentit.controller;
 
 import com.op.rentit.Application;
+import com.op.rentit.model.db.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,5 +32,9 @@ public class LogsRuntimeControllerTest {
 //                .build().perform(get("/api/logs")
 //                .contentType(MediaType.APPLICATION_JSON))
 //                .andExpect(status().isOk());
+        //logsRuntimeController.getList();
+        User user = new User();
+        user.setEmail("aaa");
+        user.setId(12L);
     }
 }
