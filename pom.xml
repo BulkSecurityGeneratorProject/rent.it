@@ -28,7 +28,8 @@
         <springfox.version>2.4.0</springfox.version>
 
         <project.testresult.directory>${project.build.directory}/test-results</project.testresult.directory>
-        <sonar.jacoco.itReportPath>${project.testresult.directory}/coverage/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
+        <sonar.jacoco.itReportPath>${project.testresult.directory}/coverage/jacoco/jacoco-it.exec
+        </sonar.jacoco.itReportPath>
         <sonar.jacoco.reportPath>${project.testresult.directory}/coverage/jacoco/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.java.codeCoveragePlugin>jacoco</sonar.java.codeCoveragePlugin>
         <sonar.sources>${project.basedir}/src/main/</sonar.sources>
@@ -64,6 +65,15 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-rest-repository</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>
@@ -258,7 +268,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
-                    <argLine>-Xms64m -Xmx512m -XX:MaxPermSize=256M -enableassertions -XX:+HeapDumpOnOutOfMemoryError ${surefireArgLine}</argLine>
+                    <argLine>-Xms64m -Xmx512m -XX:MaxPermSize=256M -enableassertions -XX:+HeapDumpOnOutOfMemoryError
+                        ${surefireArgLine}
+                    </argLine>
                     <junitArtifactName>junit:junit-dep</junitArtifactName>
                 </configuration>
             </plugin>
@@ -282,7 +294,8 @@
                             <version>[3.0.0,)</version>
                         </requireMavenVersion>
                         <requireJavaVersion>
-                            <message>You are running an older version of Java. Requires at least JDK ${java.version}</message>
+                            <message>You are running an older version of Java. Requires at least JDK ${java.version}
+                            </message>
                             <version>[${java.version}.0,)</version>
                         </requireJavaVersion>
                     </rules>
