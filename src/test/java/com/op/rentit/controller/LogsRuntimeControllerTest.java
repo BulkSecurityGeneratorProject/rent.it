@@ -28,10 +28,10 @@ public class LogsRuntimeControllerTest {
     @Test
     public void testThatWeCouldGetLog() throws Exception {
         System.out.println("hohoho!");
-//        MockMvcBuilders.standaloneSetup(logsRuntimeController)
-//                .build().perform(get("/api/logs")
-//                .contentType(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isOk());
+        MockMvcBuilders.standaloneSetup(logsRuntimeController)
+                .build().perform(get("/api/logs")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
         //logsRuntimeController.getList();
         User user = new User();
         user.setEmail("aaa");

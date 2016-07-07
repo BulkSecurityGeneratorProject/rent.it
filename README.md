@@ -1,4 +1,8 @@
 # README #
+Rent.IT Project
+System to rent any thing.
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?maxAge=2592000)](https://github.com/picaro/rent.it/releases)
+
 
 ## Project
 https://trello.com/b/mT3x7tcr/lend-it-tasks
@@ -16,9 +20,9 @@ help - to see all commands
 you could add custom commands
 
 ### Spring Boot Actuator
-<http://localhost:8080/actuator/#/actuator>
-<http://localhost:8080/health>
-<http://localhost:8080/metrics> 
+* <http://localhost:8080/actuator/#/actuator>
+* <http://localhost:8080/health>
+* <http://localhost:8080/metrics> 
 you could add custom metrics
 
 ### Code coverage
