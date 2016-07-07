@@ -1,7 +1,7 @@
 # README #
 Rent.IT Project
 System to rent any thing.
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?maxAge=2592000)](https://github.com/picaro/rent.it/releases)
+[![GitHub release](https://img.shields.io/github/release/picaro/rent.it.svg?maxAge=2592000)](https://github.com/picaro/rent.it/releases)
 
 
 ## Project
@@ -49,4 +49,4 @@ Application to lend any stuff.
 * Deployment instructions
 
 ### LICENSE 
-[http://creativecommons.org/licenses/](http://creativecommons.org/licenses/)
+[![License (CC BY-NC-ND)](https://img.shields.io/badge/license-Creative%20Commons%20BY-NC-ND%204.0-blue.svg?style=flat-square)](http://creativecommons.org/licenses/by-nc/4.0/)
