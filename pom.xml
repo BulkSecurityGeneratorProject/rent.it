@@ -14,7 +14,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.3.RELEASE</version>
+        <version>1.3.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -263,17 +263,17 @@
                     <repoToken>${coveralls.token}</repoToken>
                 </configuration>
             </plugin>
-            <plugin>
-                <!--//test reports-->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <argLine>-Xms64m -Xmx512m -XX:MaxPermSize=256M -enableassertions -XX:+HeapDumpOnOutOfMemoryError
-                        ${surefireArgLine}
-                    </argLine>
-                    <junitArtifactName>junit:junit-dep</junitArtifactName>
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--&lt;!&ndash;//test reports&ndash;&gt;-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-surefire-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<argLine>-Xms64m -Xmx512m -XX:MaxPermSize=256M -enableassertions -XX:+HeapDumpOnOutOfMemoryError-->
+                        <!--${surefireArgLine}-->
+                    <!--</argLine>-->
+                    <!--<junitArtifactName>junit:junit-dep</junitArtifactName>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
             <plugin>
                 <!--//rules-->
                 <groupId>org.apache.maven.plugins</groupId>

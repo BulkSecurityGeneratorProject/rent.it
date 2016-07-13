@@ -16,6 +16,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static org.junit.Assert.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -24,19 +25,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class LogsRuntimeControllerTest {
 
     @Autowired
-    LogsRuntimeController logsRuntimeController;
+    private LogsRuntimeController logsRuntimeController;
 
-    @Ignore
     @Test
     public void testThatWeCouldGetLog() throws Exception {
-        System.out.println("hohoho!");
         MockMvcBuilders.standaloneSetup(logsRuntimeController)
                 .build().perform(get("/api/logs")
                 .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk());
-        //logsRuntimeController.getList();
-        User user = new User();
-        user.setEmail("aaa");
-        user.setId(12L);
+                .andExpect(status().isOk())
+                .andDo(print());
     }
 }

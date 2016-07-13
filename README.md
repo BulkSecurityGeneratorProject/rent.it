@@ -3,6 +3,8 @@ Rent.IT Project
 System to rent any thing.
 [![GitHub release](https://img.shields.io/github/release/picaro/rent.it.svg?maxAge=2592000)](https://github.com/picaro/rent.it/releases)
 
+## Mindmap with ideas
+https://www.mindmup.com/#m:a11b08d3802ace013411251d36ac3dd6cf  V1
 
 ## Project
 https://trello.com/b/mT3x7tcr/lend-it-tasks
