@@ -10,7 +10,7 @@ https://www.mindmup.com/#m:a11b08d3802ace013411251d36ac3dd6cf  V1
 https://trello.com/b/mT3x7tcr/lend-it-tasks
 
 ### CI server
-[ ![Codeship Status for intercity/chef-repo](https://codeship.io/projects/a9c60310-f8fa-0133-a8ad-268d110da048/status)](https://codeship.io/projects/80440)
+[ ![Codeship Status for picaro/rent.it](https://codeship.com/projects/a9c60310-f8fa-0133-a8ad-268d110da048/status?branch=master)](https://codeship.com/projects/151098)
 
 ### Sonar
 docker-compose -f src/main/docker/sonar.yml up
