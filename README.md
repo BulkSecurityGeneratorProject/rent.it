@@ -51,4 +51,4 @@ Application to lend any stuff.
 * Deployment instructions
 
 ### LICENSE 
-[![License (CC BY-NC-ND)](https://img.shields.io/badge/license-Creative%20Commons%20BY-NC-ND%204.0-blue.svg?style=flat-square)](http://creativecommons.org/licenses/by-nc/4.0/)
+[![License (CC BY-NC-ND)](https://github.com/picaro/rent.it/blob/master/logos/by-nc-nd.png)](http://creativecommons.org/licenses/by-nc/4.0/)
