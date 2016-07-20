@@ -7,10 +7,19 @@ System for renting anything.
 https://www.mindmup.com/#m:a11b08d3802ace013411251d36ac3dd6cf  V1
 
 ## Build
-1) ./mvnw package -Pprod docker:build
+1) With environment in the Docker
+./mvnw package -Pprod docker:build
 
-2) docker-compose -f src/main/docker/app.yml up
+2) Standalone
+mvn clean install
+
+# Run 
+1) with environment
+docker-compose -f src/main/docker/app.yml up
 This command will start up your application and the services it relies on (database, search engine, JHipster Registry…).
+
+2) Standalone
+java -jar target/*.war --spring.profiles.active=prod 
 
 ## Project Tasks
 https://trello.com/b/mT3x7tcr/lend-it-tasks
