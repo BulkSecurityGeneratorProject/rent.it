@@ -1,12 +1,18 @@
 # README #
 Rent.IT Project
-System to rent any thing.
+System for renting anything.
 [![GitHub release](https://img.shields.io/github/release/picaro/rent.it.svg?maxAge=2592000)](https://github.com/picaro/rent.it/releases)
 
 ## Mindmap with ideas
 https://www.mindmup.com/#m:a11b08d3802ace013411251d36ac3dd6cf  V1
 
-## Project
+## Build
+1) ./mvnw package -Pprod docker:build
+
+2) docker-compose -f src/main/docker/app.yml up
+This command will start up your application and the services it relies on (database, search engine, JHipster Registry…).
+
+## Project Tasks
 https://trello.com/b/mT3x7tcr/lend-it-tasks
 
 ### CI server
