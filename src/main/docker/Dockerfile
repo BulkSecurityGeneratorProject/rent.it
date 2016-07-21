@@ -1,11 +1,13 @@
 FROM java:openjdk-8-jre-alpine
 
-# add directly the war
-ADD rentit*.jar /rentit.jar
+ENV JHIPSTER_SLEEP 0
 
-RUN sh -c 'touch /rentit.jar'
+# add directly the war
+ADD *.war /app.war
+
+RUN sh -c 'touch /app.war'
 VOLUME /tmp
-EXPOSE 8081 5701/udp
-EXPOSE 8080 5701/udp
-CMD echo "The application is stating..." && \
-    java -Djava.security.egd=file:/dev/./urandom -jar /rentit.jar
+EXPOSE 8080
+CMD echo "The application will start in ${JHIPSTER_SLEEP}s..." && \
+    sleep ${JHIPSTER_SLEEP} && \
+    java -Djava.security.egd=file:/dev/./urandom -jar /app.war

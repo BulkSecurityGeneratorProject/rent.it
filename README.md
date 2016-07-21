@@ -27,9 +27,6 @@ https://trello.com/b/mT3x7tcr/lend-it-tasks
 ### CI server
 [ ![Codeship Status for picaro/rent.it](https://codeship.com/projects/a9c60310-f8fa-0133-a8ad-268d110da048/status?branch=master)](https://codeship.com/projects/151098)
 
-### Sonar
-docker-compose -f src/main/docker/sonar.yml up
-
 ### Remote shell CRaSH
 ssh -p 2000 user@localhost
 password from logs
