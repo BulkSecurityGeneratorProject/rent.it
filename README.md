@@ -14,7 +14,7 @@ https://www.mindmup.com/#m:a11b08d3802ace013411251d36ac3dd6cf  V1
 mvn clean install
 
 # Run 
-1) with environment
+1) with environment ***
 docker-compose -f src/main/docker/app.yml up
 This command will start up your application and the services it relies on (database, search engine, JHipster Registry…).
 
@@ -22,7 +22,7 @@ This command will start up your application and the services it relies on (datab
 java -jar target/*.war --spring.profiles.active=prod 
 
 ## Project Tasks
-https://trello.com/b/mT3x7tcr/lend-it-tasks
+https://trello.com/b/yLbmjvrm/rent-it
 
 ### CI server
 [ ![Codeship Status for picaro/rent.it](https://codeship.com/projects/a9c60310-f8fa-0133-a8ad-268d110da048/status?branch=master)](https://codeship.com/projects/151098)
