@@ -1,0 +1,9 @@
+{
+  "relationships": [],
+  "fields": [],
+  "changelogDate": "20160723063804",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "wish_list"
+}

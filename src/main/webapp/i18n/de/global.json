@@ -16,6 +16,9 @@
                 "tag": "Tag",
                 "country": "Country",
                 "currency": "Currency",
+                "category": "Category",
+                "productAddress": "Product Address",
+                "wishList": "Wish List",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

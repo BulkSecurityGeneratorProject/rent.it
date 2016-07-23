@@ -58,3 +58,17 @@ entity Currency {
     code String,
     symbol String
 }
+
+entity Category {
+	id Long,
+	title String,
+    image String
+}
+
+entity ProductAddress {
+	id Long
+}
+
+entity WishList {
+	id Long
+}

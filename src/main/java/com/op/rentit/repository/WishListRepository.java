@@ -1,0 +1,15 @@
+package com.op.rentit.repository;
+
+import com.op.rentit.domain.WishList;
+
+import org.springframework.data.jpa.repository.*;
+
+import java.util.List;
+
+/**
+ * Spring Data JPA repository for the WishList entity.
+ */
+@SuppressWarnings("unused")
+public interface WishListRepository extends JpaRepository<WishList,Long> {
+
+}
