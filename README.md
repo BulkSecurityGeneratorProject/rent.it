@@ -35,8 +35,6 @@ you could add custom commands
 
 ### Spring Boot Actuator
 * <http://localhost:8080/actuator/#/actuator>
-* <http://localhost:8080/health>
-* <http://localhost:8080/metrics> 
 you could add custom metrics
 
 ### Code coverage

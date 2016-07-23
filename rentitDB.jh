@@ -17,3 +17,64 @@ entity Rate {
     price BigDecimal,
     name String
 }
+
+entity Comment {
+	id Long,
+    text String
+}
+
+
+entity TimeSlot {
+	id Long,
+    dateTime String,
+    duration Long,
+}
+
+entity UserAddress {
+	id Long,
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String
+}
+
+
+entity Message {
+	id Long,
+	departmentName String required
+}
+
+entity Tag {
+	id Long,
+	name String required
+}
+
+entity Settings {
+	id Long required,
+	name String required,
+    value String,
+    type String,
+	description String
+}
+
+entity WishList {
+	id Long,
+}
+
+entity Country {
+	id Long,
+	symbol String,
+    name String
+}
+
+entity Currency {
+	id Long,
+	name String,
+    code String,
+    symbol String
+}
+
+entity ProductAddress {
+	id Long
+}
+
