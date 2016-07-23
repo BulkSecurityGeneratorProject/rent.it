@@ -11,6 +11,9 @@
     <include file="config/liquibase/changelog/20160723050930_added_entity_Comment.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20160723050931_added_entity_TimeSlot.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20160723050932_added_entity_UserAddress.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20160723062150_added_entity_Tag.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20160723062151_added_entity_Country.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20160723062152_added_entity_Currency.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

@@ -1,0 +1,25 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "symbol",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160723062152",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "currency"
+}

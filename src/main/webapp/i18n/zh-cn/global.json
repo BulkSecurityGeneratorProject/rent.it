@@ -13,6 +13,9 @@
                 "comment": "Comment",
                 "timeSlot": "Time Slot",
                 "userAddress": "User Address",
+                "tag": "Tag",
+                "country": "Country",
+                "currency": "Currency",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

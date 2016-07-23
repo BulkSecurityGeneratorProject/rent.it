@@ -38,3 +38,23 @@ entity UserAddress {
 	stateProvince String
 }
 
+
+
+
+entity Tag {
+	id Long,
+	name String
+}
+
+entity Country {
+	id Long,
+	symbol String,
+    name String
+}
+
+entity Currency {
+	id Long,
+	name String,
+    code String,
+    symbol String
+}
