@@ -1,0 +1,19 @@
+
+
+entity Product {
+	id Long,
+	title String,
+    image String
+}
+
+entity Booking {
+	id Long,
+    dateTime String,
+    paymentType String,
+}
+
+entity Rate {
+	id Long,
+    price BigDecimal,
+    name String
+}
