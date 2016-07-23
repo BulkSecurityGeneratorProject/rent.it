@@ -38,6 +38,7 @@
                     <th><span translate="global.field.id">ID</span></th>
                     <th><span translate="rentitApp.booking.dateTime">Date Time</span></th>
                     <th><span translate="rentitApp.booking.paymentType">Payment Type</span></th>
+                    <th><span translate="rentitApp.booking.product">Product</span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -46,6 +47,9 @@
                     <td><a ui-sref="booking-detail({id:booking.id})">{{booking.id}}</a></td>
                     <td>{{booking.dateTime}}</td>
                     <td>{{booking.paymentType}}</td>
+                    <td>
+                        <a ui-sref="product-detail({id:booking.product.id})">{{booking.product.id}}</a>
+                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

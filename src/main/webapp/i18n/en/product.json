@@ -17,7 +17,8 @@
                 "title": "Product"
             },
             "title": "Title",
-            "image": "Image"
+            "image": "Image",
+            "productAddress": "Product Address"
         }
     }
 }

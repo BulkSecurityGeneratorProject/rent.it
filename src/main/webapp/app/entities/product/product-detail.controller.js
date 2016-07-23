@@ -5,9 +5,9 @@
         .module('rentitApp')
         .controller('ProductDetailController', ProductDetailController);
 
-    ProductDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'Product'];
+    ProductDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'Product', 'ProductAddress'];
 
-    function ProductDetailController($scope, $rootScope, $stateParams, entity, Product) {
+    function ProductDetailController($scope, $rootScope, $stateParams, entity, Product, ProductAddress) {
         var vm = this;
 
         vm.product = entity;

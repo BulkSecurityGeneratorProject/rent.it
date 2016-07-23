@@ -5,14 +5,23 @@
         .module('rentitApp')
         .controller('WishListDialogController', WishListDialogController);
 
-    WishListDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'WishList'];
+    WishListDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'WishList', 'Product'];
 
-    function WishListDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, WishList) {
+    function WishListDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, WishList, Product) {
         var vm = this;
 
         vm.wishList = entity;
         vm.clear = clear;
         vm.save = save;
+        vm.products = Product.query({filter: 'wishlist-is-null'});
+        $q.all([vm.wishList.$promise, vm.products.$promise]).then(function() {
+            if (!vm.wishList.product || !vm.wishList.product.id) {
+                return $q.reject();
+            }
+            return Product.get({id : vm.wishList.product.id}).$promise;
+        }).then(function(product) {
+            vm.products.push(product);
+        });
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

@@ -29,6 +29,10 @@ public class Booking implements Serializable {
     @Column(name = "payment_type")
     private String paymentType;
 
+    @OneToOne
+    @JoinColumn(unique = true)
+    private Product product;
+
     public Long getId() {
         return id;
     }
@@ -51,6 +55,14 @@ public class Booking implements Serializable {
 
     public void setPaymentType(String paymentType) {
         this.paymentType = paymentType;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     @Override

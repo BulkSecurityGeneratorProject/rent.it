@@ -15,7 +15,8 @@
             },
             "detail": {
                 "title": "Wish List"
-            }
+            },
+            "product": "Product"
         }
     }
 }

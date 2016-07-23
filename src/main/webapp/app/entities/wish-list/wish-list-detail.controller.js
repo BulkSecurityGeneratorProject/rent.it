@@ -5,9 +5,9 @@
         .module('rentitApp')
         .controller('WishListDetailController', WishListDetailController);
 
-    WishListDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'WishList'];
+    WishListDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'WishList', 'Product'];
 
-    function WishListDetailController($scope, $rootScope, $stateParams, entity, WishList) {
+    function WishListDetailController($scope, $rootScope, $stateParams, entity, WishList, Product) {
         var vm = this;
 
         vm.wishList = entity;

@@ -5,9 +5,9 @@
         .module('rentitApp')
         .controller('BookingDetailController', BookingDetailController);
 
-    BookingDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'Booking'];
+    BookingDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'Booking', 'Product'];
 
-    function BookingDetailController($scope, $rootScope, $stateParams, entity, Booking) {
+    function BookingDetailController($scope, $rootScope, $stateParams, entity, Booking, Product) {
         var vm = this;
 
         vm.booking = entity;

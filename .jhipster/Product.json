@@ -1,5 +1,15 @@
 {
-  "relationships": [],
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-one",
+      "relationshipName": "productAddress",
+      "otherEntityName": "productAddress",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "product"
+    }
+  ],
   "fields": [
     {
       "fieldId": 1,

@@ -29,6 +29,10 @@ public class Product implements Serializable {
     @Column(name = "image")
     private String image;
 
+    @OneToOne
+    @JoinColumn(unique = true)
+    private ProductAddress productAddress;
+
     public Long getId() {
         return id;
     }
@@ -51,6 +55,14 @@ public class Product implements Serializable {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public ProductAddress getProductAddress() {
+        return productAddress;
+    }
+
+    public void setProductAddress(ProductAddress productAddress) {
+        this.productAddress = productAddress;
     }
 
     @Override

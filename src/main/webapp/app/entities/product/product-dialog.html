@@ -26,6 +26,12 @@
                      />
         </div>
 
+        <div class="form-group">
+            <label translate="rentitApp.product.productAddress" for="field_productAddress">Product Address</label>
+            <select class="form-control" id="field_productAddress" name="productAddress" ng-model="vm.product.productAddress" ng-options="productAddress as productAddress.id for productAddress in vm.productaddresses | orderBy:'id' track by productAddress.id">
+                <option value=""></option>
+            </select>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">

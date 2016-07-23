@@ -1,5 +1,15 @@
 {
-  "relationships": [],
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-one",
+      "relationshipName": "product",
+      "otherEntityName": "product",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "wishList"
+    }
+  ],
   "fields": [],
   "changelogDate": "20160723063804",
   "dto": "no",

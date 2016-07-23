@@ -72,3 +72,9 @@ entity ProductAddress {
 entity WishList {
 	id Long
 }
+
+relationship OneToOne {
+	Product{productAddress} to ProductAddress,
+	WishList{product} to Product,
+	Booking{product} to Product
+}

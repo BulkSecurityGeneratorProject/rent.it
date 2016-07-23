@@ -17,7 +17,8 @@
                 "title": "Booking"
             },
             "dateTime": "Date Time",
-            "paymentType": "Payment Type"
+            "paymentType": "Payment Type",
+            "product": "Product"
         }
     }
 }
