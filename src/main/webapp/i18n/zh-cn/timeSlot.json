@@ -1,0 +1,23 @@
+{
+    "rentitApp": {
+        "timeSlot" : {
+            "home": {
+                "title": "Time Slots",
+                "createLabel": "Create a new Time Slot",
+                "createOrEditLabel": "Create or edit a Time Slot",
+                "search": "Search for Time Slot"
+            },
+            "created": "A new Time Slot is created with identifier {{ param }}",
+            "updated": "A Time Slot is updated with identifier {{ param }}",
+            "deleted": "A Time Slot is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Time Slot {{ id }}?"
+            },
+            "detail": {
+                "title": "Time Slot"
+            },
+            "dateTime": "Date Time",
+            "duration": "Duration"
+        }
+    }
+}

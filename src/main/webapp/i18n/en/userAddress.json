@@ -1,0 +1,25 @@
+{
+    "rentitApp": {
+        "userAddress" : {
+            "home": {
+                "title": "User Addresses",
+                "createLabel": "Create a new User Address",
+                "createOrEditLabel": "Create or edit a User Address",
+                "search": "Search for User Address"
+            },
+            "created": "A new User Address is created with identifier {{ param }}",
+            "updated": "A User Address is updated with identifier {{ param }}",
+            "deleted": "A User Address is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete User Address {{ id }}?"
+            },
+            "detail": {
+                "title": "User Address"
+            },
+            "streetAddress": "Street Address",
+            "postalCode": "Postal Code",
+            "city": "City",
+            "stateProvince": "State Province"
+        }
+    }
+}

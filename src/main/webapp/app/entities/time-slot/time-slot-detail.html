@@ -1,0 +1,22 @@
+
+<div>
+    <h2><span translate="rentitApp.timeSlot.detail.title">Time Slot</span> {{vm.timeSlot.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="rentitApp.timeSlot.dateTime">Date Time</span></dt>
+        <dd>
+            <span>{{vm.timeSlot.dateTime}}</span>
+        </dd>
+        <dt><span translate="rentitApp.timeSlot.duration">Duration</span></dt>
+        <dd>
+            <span>{{vm.timeSlot.duration}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

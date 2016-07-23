@@ -1,0 +1,20 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "dateTime",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "paymentType",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160723050928",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "booking"
+}

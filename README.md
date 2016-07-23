@@ -8,7 +8,7 @@ https://www.mindmup.com/#m:a11b08d3802ace013411251d36ac3dd6cf  V1
 
 ## Build
 1) With environment in the Docker
-./mvnw package -Pprod docker:build
+./mvnw clean package -Pprod docker:build
 
 2) Standalone
 mvn clean install

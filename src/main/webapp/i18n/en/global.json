@@ -8,6 +8,11 @@
             "entities": {
                 "main": "Entities",
                 "product": "Product",
+                "booking": "Booking",
+                "rate": "Rate",
+                "comment": "Comment",
+                "timeSlot": "Time Slot",
+                "userAddress": "User Address",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
