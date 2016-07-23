@@ -8,6 +8,13 @@
       "otherEntityField": "id",
       "ownerSide": true,
       "otherEntityRelationshipName": "booking"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "timeSlot",
+      "otherEntityName": "timeSlot",
+      "otherEntityRelationshipName": "booking"
     }
   ],
   "fields": [

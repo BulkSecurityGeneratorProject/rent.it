@@ -1,11 +1,14 @@
 package com.op.rentit.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -32,6 +35,11 @@ public class Booking implements Serializable {
     @OneToOne
     @JoinColumn(unique = true)
     private Product product;
+
+    @OneToMany(mappedBy = "booking")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<TimeSlot> timeSlots = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -63,6 +71,14 @@ public class Booking implements Serializable {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    public Set<TimeSlot> getTimeSlots() {
+        return timeSlots;
+    }
+
+    public void setTimeSlots(Set<TimeSlot> timeSlots) {
+        this.timeSlots = timeSlots;
     }
 
     @Override

@@ -5,9 +5,9 @@
         .module('rentitApp')
         .controller('TimeSlotDetailController', TimeSlotDetailController);
 
-    TimeSlotDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'TimeSlot'];
+    TimeSlotDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'TimeSlot', 'Booking'];
 
-    function TimeSlotDetailController($scope, $rootScope, $stateParams, entity, TimeSlot) {
+    function TimeSlotDetailController($scope, $rootScope, $stateParams, entity, TimeSlot, Booking) {
         var vm = this;
 
         vm.timeSlot = entity;

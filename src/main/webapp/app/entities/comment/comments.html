@@ -37,6 +37,7 @@
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
                     <th><span translate="rentitApp.comment.text">Text</span></th>
+                    <th><span translate="rentitApp.comment.product">Product</span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -44,6 +45,9 @@
                 <tr ng-repeat="comment in vm.comments track by comment.id">
                     <td><a ui-sref="comment-detail({id:comment.id})">{{comment.id}}</a></td>
                     <td>{{comment.text}}</td>
+                    <td>
+                        <a ui-sref="product-detail({id:comment.product.id})">{{comment.product.id}}</a>
+                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

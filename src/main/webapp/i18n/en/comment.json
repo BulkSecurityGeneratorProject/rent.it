@@ -16,7 +16,8 @@
             "detail": {
                 "title": "Comment"
             },
-            "text": "Text"
+            "text": "Text",
+            "product": "Product"
         }
     }
 }

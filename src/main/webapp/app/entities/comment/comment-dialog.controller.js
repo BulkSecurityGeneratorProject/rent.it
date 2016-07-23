@@ -5,14 +5,15 @@
         .module('rentitApp')
         .controller('CommentDialogController', CommentDialogController);
 
-    CommentDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Comment'];
+    CommentDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Comment', 'Product'];
 
-    function CommentDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Comment) {
+    function CommentDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Comment, Product) {
         var vm = this;
 
         vm.comment = entity;
         vm.clear = clear;
         vm.save = save;
+        vm.products = Product.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

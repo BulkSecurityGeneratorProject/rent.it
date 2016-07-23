@@ -8,6 +8,13 @@
       "otherEntityField": "id",
       "ownerSide": true,
       "otherEntityRelationshipName": "product"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "comment",
+      "otherEntityName": "comment",
+      "otherEntityRelationshipName": "product"
     }
   ],
   "fields": [

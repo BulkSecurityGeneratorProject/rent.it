@@ -1,11 +1,14 @@
 package com.op.rentit.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -32,6 +35,11 @@ public class Product implements Serializable {
     @OneToOne
     @JoinColumn(unique = true)
     private ProductAddress productAddress;
+
+    @OneToMany(mappedBy = "product")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<Comment> comments = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -63,6 +71,14 @@ public class Product implements Serializable {
 
     public void setProductAddress(ProductAddress productAddress) {
         this.productAddress = productAddress;
+    }
+
+    public Set<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<Comment> comments) {
+        this.comments = comments;
     }
 
     @Override

@@ -5,9 +5,9 @@
         .module('rentitApp')
         .controller('ProductDialogController', ProductDialogController);
 
-    ProductDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Product', 'ProductAddress'];
+    ProductDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Product', 'ProductAddress', 'Comment'];
 
-    function ProductDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, Product, ProductAddress) {
+    function ProductDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, Product, ProductAddress, Comment) {
         var vm = this;
 
         vm.product = entity;
@@ -22,6 +22,7 @@
         }).then(function(productAddress) {
             vm.productaddresses.push(productAddress);
         });
+        vm.comments = Comment.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

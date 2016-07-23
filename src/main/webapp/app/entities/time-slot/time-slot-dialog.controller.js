@@ -5,14 +5,15 @@
         .module('rentitApp')
         .controller('TimeSlotDialogController', TimeSlotDialogController);
 
-    TimeSlotDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'TimeSlot'];
+    TimeSlotDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'TimeSlot', 'Booking'];
 
-    function TimeSlotDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, TimeSlot) {
+    function TimeSlotDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, TimeSlot, Booking) {
         var vm = this;
 
         vm.timeSlot = entity;
         vm.clear = clear;
         vm.save = save;
+        vm.bookings = Booking.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

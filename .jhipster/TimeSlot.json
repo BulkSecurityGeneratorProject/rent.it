@@ -1,5 +1,13 @@
 {
-  "relationships": [],
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "booking",
+      "otherEntityName": "booking",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
   "fields": [
     {
       "fieldId": 1,

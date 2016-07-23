@@ -18,7 +18,8 @@
             },
             "title": "Title",
             "image": "Image",
-            "productAddress": "Product Address"
+            "productAddress": "Product Address",
+            "comment": "Comment"
         }
     }
 }

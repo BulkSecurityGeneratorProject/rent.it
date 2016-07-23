@@ -1,8 +1,8 @@
 
-  ${AnsiColor.GREEN}   █████   █████ ██    ██  ██████   ${AnsiColor.RED} ██  ██████
-  ${AnsiColor.GREEN}   ██   ██ ██     ███  ██     ██       ${AnsiColor.RED} ██      ██
-  ${AnsiColor.GREEN}   █████   █████ ██  ███     ██       ${AnsiColor.RED} ██      ██
-  ${AnsiColor.GREEN}   ██   ██ ██     ██    ██     ██       ${AnsiColor.RED} ██      ██
+  ${AnsiColor.GREEN}   █████  █████ ██    ██  ██████   ${AnsiColor.RED} ██  ██████
+  ${AnsiColor.GREEN}   ██   ██ ██      ███  ██     ██       ${AnsiColor.RED} ██      ██
+  ${AnsiColor.GREEN}   █████  █████ ██  ███     ██       ${AnsiColor.RED} ██      ██
+  ${AnsiColor.GREEN}   ██   ██ ██      ██    ██     ██       ${AnsiColor.RED} ██      ██
   ${AnsiColor.GREEN}   ██   ██ █████ ██    ██     ██       ${AnsiColor.RED} ██      ██
 
 ${AnsiColor.BRIGHT_BLUE}:: Rent It APP :: Running Spring Boot ${spring-boot.version} ::

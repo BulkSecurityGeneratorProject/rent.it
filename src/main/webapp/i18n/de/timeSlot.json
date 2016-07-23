@@ -17,7 +17,8 @@
                 "title": "Time Slot"
             },
             "dateTime": "Date Time",
-            "duration": "Duration"
+            "duration": "Duration",
+            "booking": "Booking"
         }
     }
 }

@@ -26,6 +26,9 @@ public class Comment implements Serializable {
     @Column(name = "text")
     private String text;
 
+    @ManyToOne
+    private Product product;
+
     public Long getId() {
         return id;
     }
@@ -40,6 +43,14 @@ public class Comment implements Serializable {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     @Override

@@ -78,3 +78,8 @@ relationship OneToOne {
 	WishList{product} to Product,
 	Booking{product} to Product
 }
+
+relationship OneToMany {
+	Product{comment} to Comment,
+	Booking{timeSlot} to TimeSlot
+}

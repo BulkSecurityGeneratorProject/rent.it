@@ -38,6 +38,7 @@
                     <th><span translate="global.field.id">ID</span></th>
                     <th><span translate="rentitApp.timeSlot.dateTime">Date Time</span></th>
                     <th><span translate="rentitApp.timeSlot.duration">Duration</span></th>
+                    <th><span translate="rentitApp.timeSlot.booking">Booking</span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -46,6 +47,9 @@
                     <td><a ui-sref="time-slot-detail({id:timeSlot.id})">{{timeSlot.id}}</a></td>
                     <td>{{timeSlot.dateTime}}</td>
                     <td>{{timeSlot.duration}}</td>
+                    <td>
+                        <a ui-sref="booking-detail({id:timeSlot.booking.id})">{{timeSlot.booking.id}}</a>
+                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

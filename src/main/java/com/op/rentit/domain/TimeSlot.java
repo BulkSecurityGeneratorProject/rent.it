@@ -29,6 +29,9 @@ public class TimeSlot implements Serializable {
     @Column(name = "duration")
     private Long duration;
 
+    @ManyToOne
+    private Booking booking;
+
     public Long getId() {
         return id;
     }
@@ -51,6 +54,14 @@ public class TimeSlot implements Serializable {
 
     public void setDuration(Long duration) {
         this.duration = duration;
+    }
+
+    public Booking getBooking() {
+        return booking;
+    }
+
+    public void setBooking(Booking booking) {
+        this.booking = booking;
     }
 
     @Override

@@ -18,7 +18,8 @@
             },
             "dateTime": "Date Time",
             "paymentType": "Payment Type",
-            "product": "Product"
+            "product": "Product",
+            "timeSlot": "Time Slot"
         }
     }
 }
