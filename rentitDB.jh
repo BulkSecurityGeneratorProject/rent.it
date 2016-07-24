@@ -18,6 +18,12 @@ entity Rate {
     name String
 }
 
+entity Message {
+	id Long,
+    dateTime String,
+    text String
+} 
+
 entity Comment {
 	id Long,
     text String
@@ -71,6 +77,14 @@ entity ProductAddress {
 
 entity WishList {
 	id Long
+}
+
+entity AppSettings {
+	id Long ,
+	name String ,
+    value String,
+    type String,
+	description String
 }
 
 relationship OneToOne {

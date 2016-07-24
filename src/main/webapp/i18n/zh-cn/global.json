@@ -19,6 +19,8 @@
                 "category": "Category",
                 "productAddress": "Product Address",
                 "wishList": "Wish List",
+                "message": "Message",
+                "appSettings": "App Settings",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
