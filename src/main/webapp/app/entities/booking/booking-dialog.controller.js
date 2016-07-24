@@ -5,14 +5,15 @@
         .module('rentitApp')
         .controller('BookingDialogController', BookingDialogController);
 
-    BookingDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Booking', 'Product', 'TimeSlot'];
+    BookingDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Booking', 'User', 'Product', 'TimeSlot'];
 
-    function BookingDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, Booking, Product, TimeSlot) {
+    function BookingDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, Booking, User, Product, TimeSlot) {
         var vm = this;
 
         vm.booking = entity;
         vm.clear = clear;
         vm.save = save;
+        vm.users = User.query();
         vm.products = Product.query({filter: 'booking-is-null'});
         $q.all([vm.booking.$promise, vm.products.$promise]).then(function() {
             if (!vm.booking.product || !vm.booking.product.id) {

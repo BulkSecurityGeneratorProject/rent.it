@@ -28,7 +28,11 @@
             <column name="image" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-                        <column name="product_address_id" type="bigint">
+            
+            <column name="user_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="product_address_id" type="bigint">
                 <constraints unique="true" nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->

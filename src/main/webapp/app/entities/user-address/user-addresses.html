@@ -40,6 +40,7 @@
                     <th><span translate="rentitApp.userAddress.postalCode">Postal Code</span></th>
                     <th><span translate="rentitApp.userAddress.city">City</span></th>
                     <th><span translate="rentitApp.userAddress.stateProvince">State Province</span></th>
+                    <th><span translate="rentitApp.userAddress.user">User</span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -50,6 +51,9 @@
                     <td>{{userAddress.postalCode}}</td>
                     <td>{{userAddress.city}}</td>
                     <td>{{userAddress.stateProvince}}</td>
+                    <td>
+                        {{userAddress.user.id}}
+                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

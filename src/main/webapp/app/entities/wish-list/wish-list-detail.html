@@ -4,6 +4,10 @@
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="rentitApp.wishList.user">User</span></dt>
+        <dd>
+            {{vm.wishList.user.id}}
+        </dd>
         <dt><span translate="rentitApp.wishList.product">Product</span></dt>
         <dd>
             <a ui-sref="product-detail({id:vm.wishList.product.id})">{{vm.wishList.product.id}}</a>

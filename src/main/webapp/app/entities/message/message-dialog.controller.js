@@ -5,14 +5,15 @@
         .module('rentitApp')
         .controller('MessageDialogController', MessageDialogController);
 
-    MessageDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Message'];
+    MessageDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Message', 'User'];
 
-    function MessageDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Message) {
+    function MessageDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, Message, User) {
         var vm = this;
 
         vm.message = entity;
         vm.clear = clear;
         vm.save = save;
+        vm.users = User.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

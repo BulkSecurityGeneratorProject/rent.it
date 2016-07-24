@@ -38,6 +38,8 @@
                     <th><span translate="global.field.id">ID</span></th>
                     <th><span translate="rentitApp.message.dateTime">Date Time</span></th>
                     <th><span translate="rentitApp.message.text">Text</span></th>
+                    <th><span translate="rentitApp.message.user">User</span></th>
+                    <th><span translate="rentitApp.message.receiver">Receiver</span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -46,6 +48,12 @@
                     <td><a ui-sref="message-detail({id:message.id})">{{message.id}}</a></td>
                     <td>{{message.dateTime}}</td>
                     <td>{{message.text}}</td>
+                    <td>
+                        {{message.user.id}}
+                    </td>
+                    <td>
+                        {{message.receiver.id}}
+                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

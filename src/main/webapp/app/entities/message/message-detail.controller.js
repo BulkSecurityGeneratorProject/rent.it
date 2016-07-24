@@ -5,9 +5,9 @@
         .module('rentitApp')
         .controller('MessageDetailController', MessageDetailController);
 
-    MessageDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'Message'];
+    MessageDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'Message', 'User'];
 
-    function MessageDetailController($scope, $rootScope, $stateParams, entity, Message) {
+    function MessageDetailController($scope, $rootScope, $stateParams, entity, Message, User) {
         var vm = this;
 
         vm.message = entity;

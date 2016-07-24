@@ -2,6 +2,13 @@
   "relationships": [
     {
       "relationshipId": 1,
+      "relationshipName": "user",
+      "otherEntityName": "user",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
       "relationshipType": "one-to-one",
       "relationshipName": "productAddress",
       "otherEntityName": "productAddress",
@@ -10,7 +17,7 @@
       "otherEntityRelationshipName": "product"
     },
     {
-      "relationshipId": 2,
+      "relationshipId": 3,
       "relationshipType": "one-to-many",
       "relationshipName": "comment",
       "otherEntityName": "comment",

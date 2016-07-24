@@ -1,9 +1,9 @@
 
-  ${AnsiColor.GREEN}   █████  █████ ██    ██  ██████   ${AnsiColor.RED} ██  ██████
-  ${AnsiColor.GREEN}   ██   ██ ██      ███  ██     ██       ${AnsiColor.RED} ██      ██
-  ${AnsiColor.GREEN}   █████  █████ ██  ███     ██       ${AnsiColor.RED} ██      ██
-  ${AnsiColor.GREEN}   ██   ██ ██      ██    ██     ██       ${AnsiColor.RED} ██      ██
-  ${AnsiColor.GREEN}   ██   ██ █████ ██    ██     ██       ${AnsiColor.RED} ██      ██
+  ${AnsiColor.GREEN}   █████__█████_██____██__██████   ${AnsiColor.RED} ██  ██████
+  ${AnsiColor.GREEN}   ██___██_██______███__██_____██       ${AnsiColor.RED} ██      ██
+  ${AnsiColor.GREEN}   █████__█████_██__███_____██       ${AnsiColor.RED} ██      ██
+  ${AnsiColor.GREEN}   ██___██_██______██____██_____██       ${AnsiColor.RED} ██      ██
+  ${AnsiColor.GREEN}   ██___██_█████_██____██_____██       ${AnsiColor.RED} ██      ██
 
 ${AnsiColor.BRIGHT_BLUE}:: Rent It APP :: Running Spring Boot ${spring-boot.version} ::
 :: https://github.com/picaro/rent.it ::${AnsiColor.DEFAULT}

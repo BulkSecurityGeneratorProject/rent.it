@@ -35,6 +35,9 @@ public class UserAddress implements Serializable {
     @Column(name = "state_province")
     private String stateProvince;
 
+    @ManyToOne
+    private User user;
+
     public Long getId() {
         return id;
     }
@@ -73,6 +76,14 @@ public class UserAddress implements Serializable {
 
     public void setStateProvince(String stateProvince) {
         this.stateProvince = stateProvince;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override

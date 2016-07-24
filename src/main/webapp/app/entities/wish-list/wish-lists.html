@@ -36,6 +36,7 @@
             <thead>
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="rentitApp.wishList.user">User</span></th>
                     <th><span translate="rentitApp.wishList.product">Product</span></th>
                     <th></th>
                 </tr>
@@ -43,6 +44,9 @@
             <tbody>
                 <tr ng-repeat="wishList in vm.wishLists track by wishList.id">
                     <td><a ui-sref="wish-list-detail({id:wishList.id})">{{wishList.id}}</a></td>
+                    <td>
+                        {{wishList.user.id}}
+                    </td>
                     <td>
                         <a ui-sref="product-detail({id:wishList.product.id})">{{wishList.product.id}}</a>
                     </td>

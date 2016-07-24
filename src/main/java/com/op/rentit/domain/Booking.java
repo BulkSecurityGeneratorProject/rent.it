@@ -32,6 +32,9 @@ public class Booking implements Serializable {
     @Column(name = "payment_type")
     private String paymentType;
 
+    @ManyToOne
+    private User user;
+
     @OneToOne
     @JoinColumn(unique = true)
     private Product product;
@@ -63,6 +66,14 @@ public class Booking implements Serializable {
 
     public void setPaymentType(String paymentType) {
         this.paymentType = paymentType;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Product getProduct() {

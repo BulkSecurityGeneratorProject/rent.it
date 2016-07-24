@@ -12,6 +12,10 @@
         <dd>
             <span>{{vm.product.image}}</span>
         </dd>
+        <dt><span translate="rentitApp.product.user">User</span></dt>
+        <dd>
+            {{vm.product.user.id}}
+        </dd>
         <dt><span translate="rentitApp.product.productAddress">Product Address</span></dt>
         <dd>
             <a ui-sref="product-address-detail({id:vm.product.productAddress.id})">{{vm.product.productAddress.id}}</a>

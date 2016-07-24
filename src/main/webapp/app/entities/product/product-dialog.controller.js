@@ -5,14 +5,15 @@
         .module('rentitApp')
         .controller('ProductDialogController', ProductDialogController);
 
-    ProductDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Product', 'ProductAddress', 'Comment'];
+    ProductDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Product', 'User', 'ProductAddress', 'Comment'];
 
-    function ProductDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, Product, ProductAddress, Comment) {
+    function ProductDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, Product, User, ProductAddress, Comment) {
         var vm = this;
 
         vm.product = entity;
         vm.clear = clear;
         vm.save = save;
+        vm.users = User.query();
         vm.productaddresses = ProductAddress.query({filter: 'product-is-null'});
         $q.all([vm.product.$promise, vm.productaddresses.$promise]).then(function() {
             if (!vm.product.productAddress || !vm.product.productAddress.id) {

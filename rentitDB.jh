@@ -1,4 +1,16 @@
 
+entity User {
+	id Long,
+	login String,
+    password String,
+    firstName String,
+    lastName String,    
+    email String,
+    activated Boolean,
+    langKey String,
+    activationKey String,
+    resetKey String
+}
 
 entity Product {
 	id Long,
@@ -90,10 +102,16 @@ entity AppSettings {
 relationship OneToOne {
 	Product{productAddress} to ProductAddress,
 	WishList{product} to Product,
-	Booking{product} to Product
+	Booking{product} to Product,
+	Message{receiver} to User	
 }
 
 relationship OneToMany {
 	Product{comment} to Comment,
-	Booking{timeSlot} to TimeSlot
+	Booking{timeSlot} to TimeSlot,
+	User{sender} to Message,
+    User{product} to Product,
+	User{booking} to Booking,
+    User{userAddress} to UserAddress,
+    User{wishList} to WishList
 }

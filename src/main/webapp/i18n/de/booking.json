@@ -18,6 +18,7 @@
             },
             "dateTime": "Date Time",
             "paymentType": "Payment Type",
+            "user": "User",
             "product": "Product",
             "timeSlot": "Time Slot"
         }

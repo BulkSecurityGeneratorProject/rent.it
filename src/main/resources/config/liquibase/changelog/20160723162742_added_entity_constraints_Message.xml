@@ -4,21 +4,21 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
     <!--
-        Added the constraints for entity Booking.
+        Added the constraints for entity Message.
     -->
-    <changeSet id="20160723050928-2" author="jhipster">
+    <changeSet id="20160723162742-2" author="jhipster">
         
         <addForeignKeyConstraint baseColumnNames="user_id"
-                                 baseTableName="booking"
-                                 constraintName="fk_booking_user_id"
+                                 baseTableName="message"
+                                 constraintName="fk_message_user_id"
                                  referencedColumnNames="id"
                                  referencedTableName="jhi_user"/>
 
-        <addForeignKeyConstraint baseColumnNames="product_id"
-                                 baseTableName="booking"
-                                 constraintName="fk_booking_product_id"
+        <addForeignKeyConstraint baseColumnNames="receiver_id"
+                                 baseTableName="message"
+                                 constraintName="fk_message_receiver_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="product"/>
+                                 referencedTableName="jhi_user"/>
 
     </changeSet>
 </databaseChangeLog>

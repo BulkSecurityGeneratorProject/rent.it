@@ -17,7 +17,9 @@
                 "title": "Message"
             },
             "dateTime": "Date Time",
-            "text": "Text"
+            "text": "Text",
+            "user": "User",
+            "receiver": "Receiver"
         }
     }
 }

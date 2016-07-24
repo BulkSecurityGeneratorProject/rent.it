@@ -32,6 +32,9 @@ public class Product implements Serializable {
     @Column(name = "image")
     private String image;
 
+    @ManyToOne
+    private User user;
+
     @OneToOne
     @JoinColumn(unique = true)
     private ProductAddress productAddress;
@@ -63,6 +66,14 @@ public class Product implements Serializable {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public ProductAddress getProductAddress() {

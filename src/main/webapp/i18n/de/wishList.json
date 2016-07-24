@@ -16,6 +16,7 @@
             "detail": {
                 "title": "Wish List"
             },
+            "user": "User",
             "product": "Product"
         }
     }

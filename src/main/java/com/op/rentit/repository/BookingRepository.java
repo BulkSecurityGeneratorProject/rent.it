@@ -12,4 +12,7 @@ import java.util.List;
 @SuppressWarnings("unused")
 public interface BookingRepository extends JpaRepository<Booking,Long> {
 
+    @Query("select booking from Booking booking where booking.user.login = ?#{principal.username}")
+    List<Booking> findByUserIsCurrentUser();
+
 }

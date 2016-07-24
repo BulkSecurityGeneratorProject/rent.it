@@ -5,9 +5,9 @@
         .module('rentitApp')
         .controller('UserAddressDetailController', UserAddressDetailController);
 
-    UserAddressDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'UserAddress'];
+    UserAddressDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'UserAddress', 'User'];
 
-    function UserAddressDetailController($scope, $rootScope, $stateParams, entity, UserAddress) {
+    function UserAddressDetailController($scope, $rootScope, $stateParams, entity, UserAddress, User) {
         var vm = this;
 
         vm.userAddress = entity;

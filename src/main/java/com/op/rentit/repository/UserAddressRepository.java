@@ -12,4 +12,7 @@ import java.util.List;
 @SuppressWarnings("unused")
 public interface UserAddressRepository extends JpaRepository<UserAddress,Long> {
 
+    @Query("select userAddress from UserAddress userAddress where userAddress.user.login = ?#{principal.username}")
+    List<UserAddress> findByUserIsCurrentUser();
+
 }

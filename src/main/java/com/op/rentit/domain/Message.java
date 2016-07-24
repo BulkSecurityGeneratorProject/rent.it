@@ -29,6 +29,13 @@ public class Message implements Serializable {
     @Column(name = "text")
     private String text;
 
+    @ManyToOne
+    private User user;
+
+    @OneToOne
+    @JoinColumn(unique = true)
+    private User receiver;
+
     public Long getId() {
         return id;
     }
@@ -51,6 +58,22 @@ public class Message implements Serializable {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public User getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(User user) {
+        this.receiver = user;
     }
 
     @Override

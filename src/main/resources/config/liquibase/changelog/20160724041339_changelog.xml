@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   <changeSet author="opastukhov (generated)" id="1469333625694-1">
+      <addColumn tableName="message">
+         <column name="receiver_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-2">
+      <addColumn tableName="booking">
+         <column name="user_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-3">
+      <addColumn tableName="message">
+         <column name="user_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-4">
+      <addColumn tableName="product">
+         <column name="user_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-5">
+      <addColumn tableName="user_address">
+         <column name="user_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-6">
+      <addColumn tableName="wish_list">
+         <column name="user_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-7">
+      <addUniqueConstraint columnNames="receiver_id"
+                           constraintName="UC_MESSAGERECEIVER_ID_COL"
+                           tableName="message"/>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-8">
+      <addForeignKeyConstraint baseColumnNames="user_id"
+                               baseTableName="message"
+                               constraintName="FK_f80s4splfik51j2ja555ygvws"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="jhi_user"/>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-9">
+      <addForeignKeyConstraint baseColumnNames="receiver_id"
+                               baseTableName="message"
+                               constraintName="FK_ixs9pmnxrsg52drx6tcku04wb"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="jhi_user"/>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-10">
+      <addForeignKeyConstraint baseColumnNames="user_id"
+                               baseTableName="booking"
+                               constraintName="FK_jx9a9qmksuasu3taidjqyp0co"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="jhi_user"/>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-11">
+      <addForeignKeyConstraint baseColumnNames="user_id"
+                               baseTableName="user_address"
+                               constraintName="FK_kfu0161nvirkey6fwd6orucv7"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="jhi_user"/>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-12">
+      <addForeignKeyConstraint baseColumnNames="user_id"
+                               baseTableName="product"
+                               constraintName="FK_miislg5rujgruv45l3hv00cn2"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="jhi_user"/>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-13">
+      <addForeignKeyConstraint baseColumnNames="user_id"
+                               baseTableName="wish_list"
+                               constraintName="FK_r1w2h67p25icr918heol9jisu"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="jhi_user"/>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-14">
+      <dropUniqueConstraint constraintName="user_id" tableName="jhi_social_user_connection"/>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1469333625694-15">
+      <dropUniqueConstraint constraintName="user_id_2" tableName="jhi_social_user_connection"/>
+   </changeSet>
+</databaseChangeLog>
