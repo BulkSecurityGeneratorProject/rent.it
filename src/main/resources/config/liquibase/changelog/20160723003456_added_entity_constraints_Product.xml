@@ -20,5 +20,27 @@
                                  referencedColumnNames="id"
                                  referencedTableName="product_address"/>
 
+        <addForeignKeyConstraint baseColumnNames="products_id"
+                                 baseTableName="product_category"
+                                 constraintName="fk_product_category_category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="product"/>
+        <addForeignKeyConstraint baseColumnNames="categories_id"
+                                 baseTableName="product_category"
+                                 constraintName="fk_product_category_product_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="category"/>
+        
+        <addForeignKeyConstraint baseColumnNames="products_id"
+                                 baseTableName="product_tag"
+                                 constraintName="fk_product_tag_tag_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="product"/>
+        <addForeignKeyConstraint baseColumnNames="tags_id"
+                                 baseTableName="product_tag"
+                                 constraintName="fk_product_tag_product_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tag"/>
+        
     </changeSet>
 </databaseChangeLog>

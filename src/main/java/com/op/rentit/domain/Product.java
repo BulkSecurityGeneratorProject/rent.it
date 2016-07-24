@@ -44,6 +44,20 @@ public class Product implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Comment> comments = new HashSet<>();
 
+    @ManyToMany
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    @JoinTable(name = "product_category",
+               joinColumns = @JoinColumn(name="products_id", referencedColumnName="ID"),
+               inverseJoinColumns = @JoinColumn(name="categories_id", referencedColumnName="ID"))
+    private Set<Category> categories = new HashSet<>();
+
+    @ManyToMany
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    @JoinTable(name = "product_tag",
+               joinColumns = @JoinColumn(name="products_id", referencedColumnName="ID"),
+               inverseJoinColumns = @JoinColumn(name="tags_id", referencedColumnName="ID"))
+    private Set<Tag> tags = new HashSet<>();
+
     public Long getId() {
         return id;
     }
@@ -90,6 +104,22 @@ public class Product implements Serializable {
 
     public void setComments(Set<Comment> comments) {
         this.comments = comments;
+    }
+
+    public Set<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
+    }
+
+    public Set<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(Set<Tag> tags) {
+        this.tags = tags;
     }
 
     @Override

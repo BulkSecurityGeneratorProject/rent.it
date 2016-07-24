@@ -97,7 +97,7 @@ public class ProductResource {
     @Timed
     public List<Product> getAllProducts() {
         log.debug("REST request to get all Products");
-        List<Product> products = productRepository.findAll();
+        List<Product> products = productRepository.findAllWithEagerRelationships();
         return products;
     }
 
@@ -113,7 +113,7 @@ public class ProductResource {
     @Timed
     public ResponseEntity<Product> getProduct(@PathVariable Long id) {
         log.debug("REST request to get Product : {}", id);
-        Product product = productRepository.findOne(id);
+        Product product = productRepository.findOneWithEagerRelationships(id);
         return Optional.ofNullable(product)
             .map(result -> new ResponseEntity<>(
                 result,

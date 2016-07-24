@@ -20,7 +20,9 @@
             "image": "Image",
             "user": "User",
             "productAddress": "Product Address",
-            "comment": "Comment"
+            "comment": "Comment",
+            "category": "Category",
+            "tag": "Tag"
         }
     }
 }

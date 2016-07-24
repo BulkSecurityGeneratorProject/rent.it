@@ -1,44 +1,58 @@
 {
-  "relationships": [
-    {
-      "relationshipId": 1,
-      "relationshipName": "user",
-      "otherEntityName": "user",
-      "relationshipType": "many-to-one",
-      "otherEntityField": "id"
-    },
-    {
-      "relationshipId": 2,
-      "relationshipType": "one-to-one",
-      "relationshipName": "productAddress",
-      "otherEntityName": "productAddress",
-      "otherEntityField": "id",
-      "ownerSide": true,
-      "otherEntityRelationshipName": "product"
-    },
-    {
-      "relationshipId": 3,
-      "relationshipType": "one-to-many",
-      "relationshipName": "comment",
-      "otherEntityName": "comment",
-      "otherEntityRelationshipName": "product"
-    }
-  ],
-  "fields": [
-    {
-      "fieldId": 1,
-      "fieldName": "title",
-      "fieldType": "String"
-    },
-    {
-      "fieldId": 2,
-      "fieldName": "image",
-      "fieldType": "String"
-    }
-  ],
-  "changelogDate": "20160723003456",
-  "dto": "no",
-  "pagination": "no",
-  "service": "no",
-  "entityTableName": "product"
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipType": "one-to-one",
+            "relationshipName": "productAddress",
+            "otherEntityName": "productAddress",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "product"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipType": "one-to-many",
+            "relationshipName": "comment",
+            "otherEntityName": "comment",
+            "otherEntityRelationshipName": "product"
+        },
+        {
+            "relationshipName": "category",
+            "otherEntityName": "category",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "title",
+            "ownerSide": true
+        },
+        {
+            "relationshipName": "tag",
+            "otherEntityName": "tag",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "name",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "image",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160723003456",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "product",
+    "pagination": "no"
 }

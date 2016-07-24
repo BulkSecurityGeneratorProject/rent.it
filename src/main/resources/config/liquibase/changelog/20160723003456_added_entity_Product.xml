@@ -38,5 +38,27 @@
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
         
+        <createTable tableName="product_category">
+            <column name="categories_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="products_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="products_id, categories_id" tableName="product_category"/>
+        
+        <createTable tableName="product_tag">
+            <column name="tags_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="products_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="products_id, tags_id" tableName="product_tag"/>
+        
     </changeSet>
 </databaseChangeLog>

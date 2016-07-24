@@ -20,6 +20,18 @@
         <dd>
             <a ui-sref="product-address-detail({id:vm.product.productAddress.id})">{{vm.product.productAddress.id}}</a>
         </dd>
+        <dt><span translate="rentitApp.product.category">Category</span></dt>
+        <dd>
+            <span ng-repeat="category in vm.product.categories">
+                <a ui-sref="category-detail({id: {{category.id}}})">{{category.title}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="rentitApp.product.tag">Tag</span></dt>
+        <dd>
+            <span ng-repeat="tag in vm.product.tags">
+                <a ui-sref="tag-detail({id: {{tag.id}}})">{{tag.name}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
     </dl>
 
     <button type="submit"
