@@ -133,3 +133,4 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
+/PhantomJS_2.1.1_(Windows_7_0.0.0)/target/test-results/karma/TESTS-results.xml
