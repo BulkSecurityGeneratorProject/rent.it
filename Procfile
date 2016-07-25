@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS server/jetty-runner.jar --port 80 target/*.war
+web: java -Dserver.port=80 -jar  target/rentit-0.0.1-SNAPSHOT.war
