@@ -28,6 +28,7 @@ build_docker_container:
             code: sudo docker version
 deploy_docker_to_digitalocean:
     steps:
+
         - wercker/add-ssh-key:
             keyname: REMOTE_HOST_KEY
         - add-to-known_hosts:
