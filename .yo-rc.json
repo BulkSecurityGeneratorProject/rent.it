@@ -29,6 +29,15 @@
       "en",
       "zh-cn",
       "de"
-    ]
+    ],
+    "aws": {
+      "applicationName": "rentit",
+      "environmentName": "rentit-env",
+      "bucketName": "tst-2",
+      "instanceType": "t2.micro",
+      "awsRegion": "us-east-1",
+      "dbName": "rentit",
+      "dbInstanceClass": "db.t2.micro"
+    }
   }
 }
