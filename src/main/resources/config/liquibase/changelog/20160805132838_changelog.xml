@@ -5,12 +5,12 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
    <changeSet author="opastukhov (generated)" id="1470403723811-1">
       <addColumn tableName="product">
-         <column name="latitude" type="float"/>
+         <column name="latitude" type="varchar(255)"/>
       </addColumn>
    </changeSet>
    <changeSet author="opastukhov (generated)" id="1470403723811-2">
       <addColumn tableName="product">
-         <column name="longitude" type="float"/>
+         <column name="longitude" type="varchar(255)"/>
       </addColumn>
    </changeSet>
 </databaseChangeLog>

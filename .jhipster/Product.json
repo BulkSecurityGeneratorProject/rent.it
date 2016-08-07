@@ -52,12 +52,12 @@
         {
             "fieldId": 3,
             "fieldName": "latitude",
-            "fieldType": "Float"
+            "fieldType": "String"
         },
         {
             "fieldId": 4,
             "fieldName": "longitude",
-            "fieldType": "Float"
+            "fieldType": "String"
         }
     ],
     "changelogDate": "20160723003456",

@@ -31,11 +31,11 @@ public class Product implements Serializable {
     @Column(name = "image")
     private String image;
 
-    @Column(name = "latitude", columnDefinition = "FLOAT(10,6)")
-    private Float latitude;
+    @Column(name = "latitude")
+    private String latitude;
 
-    @Column(name = "longitude", columnDefinition = "FLOAT(10,6)")
-    private Float longitude;
+    @Column(name = "longitude")
+    private String longitude;
 
     @ManyToOne
     private User user;
