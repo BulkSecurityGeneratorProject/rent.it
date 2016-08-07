@@ -48,6 +48,16 @@
             "fieldId": 2,
             "fieldName": "image",
             "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "latitude",
+            "fieldType": "Float"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "longitude",
+            "fieldType": "Float"
         }
     ],
     "changelogDate": "20160723003456",

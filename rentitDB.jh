@@ -14,8 +14,10 @@ entity User {
 
 entity Product {
 	id Long,
-	title String,
-    image String
+	title String required,
+    image String,
+	latitude Float required,
+	longitude Float required 
 }
 
 entity Booking {
