@@ -58,6 +58,11 @@
             "fieldId": 4,
             "fieldName": "longitude",
             "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "description",
+            "fieldType": "Text"
         }
     ],
     "changelogDate": "20160723003456",

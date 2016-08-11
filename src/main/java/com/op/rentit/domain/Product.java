@@ -7,10 +7,10 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.Objects;
 
 @Data
 @Entity
@@ -19,12 +19,11 @@ import java.util.Objects;
 @Document(indexName = "product")
 public class Product implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotNull
     @Column(name = "title")
     private String title;
 
@@ -37,7 +36,11 @@ public class Product implements Serializable {
     @Column(name = "longitude")
     private String longitude;
 
+    @Column(name = "description")
+    private String description;
+
     @ManyToOne
+    @JsonIgnore
     private User user;
 
     @OneToOne
@@ -52,107 +55,16 @@ public class Product implements Serializable {
     @ManyToMany
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     @JoinTable(name = "product_category",
-               joinColumns = @JoinColumn(name="products_id", referencedColumnName="ID"),
-               inverseJoinColumns = @JoinColumn(name="categories_id", referencedColumnName="ID"))
+        joinColumns = @JoinColumn(name = "products_id", referencedColumnName = "ID"),
+        inverseJoinColumns = @JoinColumn(name = "categories_id", referencedColumnName = "ID"))
     private Set<Category> categories = new HashSet<>();
 
     @ManyToMany
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     @JoinTable(name = "product_tag",
-               joinColumns = @JoinColumn(name="products_id", referencedColumnName="ID"),
-               inverseJoinColumns = @JoinColumn(name="tags_id", referencedColumnName="ID"))
+        joinColumns = @JoinColumn(name = "products_id", referencedColumnName = "ID"),
+        inverseJoinColumns = @JoinColumn(name = "tags_id", referencedColumnName = "ID"))
     private Set<Tag> tags = new HashSet<>();
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public ProductAddress getProductAddress() {
-        return productAddress;
-    }
-
-    public void setProductAddress(ProductAddress productAddress) {
-        this.productAddress = productAddress;
-    }
-
-    public Set<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(Set<Comment> comments) {
-        this.comments = comments;
-    }
-
-    public Set<Category> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(Set<Category> categories) {
-        this.categories = categories;
-    }
-
-    public Set<Tag> getTags() {
-        return tags;
-    }
-
-    public void setTags(Set<Tag> tags) {
-        this.tags = tags;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Product product = (Product) o;
-        if(product.id == null || id == null) {
-            return false;
-        }
-        return Objects.equals(id, product.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(id);
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-            "id=" + id +
-            ", title='" + title + "'" +
-            ", image='" + image + "'" +
-            '}';
-    }
 }
