@@ -61,7 +61,7 @@ spring:
 
         # see https://apps.twitter.com/app/
         twitter:
-            clientId: xxx
+            clientId: quDSc4QRYYrWojHGK3qYEMLlK
             clientSecret: ${TWITTER_CLIENT_SECRET}
 
 liquibase:
