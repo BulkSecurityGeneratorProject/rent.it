@@ -36,7 +36,7 @@ public class Product implements Serializable {
     @Column(name = "longitude")
     private String longitude;
 
-    @Column(name = "description")
+    @Column(name = "description", columnDefinition="clob")
     private String description;
 
     @ManyToOne
