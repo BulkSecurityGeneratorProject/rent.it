@@ -13,7 +13,7 @@
     <artifactId>rentit</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Rentit</name>
+    <name>Working Bricks</name>
 
     <prerequisites>
         <maven>3.0.0</maven>
