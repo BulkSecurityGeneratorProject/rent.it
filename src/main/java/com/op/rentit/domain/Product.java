@@ -66,5 +66,11 @@ public class Product implements Serializable {
         inverseJoinColumns = @JoinColumn(name = "tags_id", referencedColumnName = "ID"))
     private Set<Tag> tags = new HashSet<>();
 
+    @ManyToMany
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    @JoinTable(name = "product_images",
+        joinColumns = @JoinColumn(name = "products_id", referencedColumnName = "ID"),
+        inverseJoinColumns = @JoinColumn(name = "image_id", referencedColumnName = "ID"))
+    private Set<Image> images = new HashSet<>();
 
 }

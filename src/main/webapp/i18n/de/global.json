@@ -21,6 +21,7 @@
                 "wishList": "Wish List",
                 "message": "Message",
                 "appSettings": "App Settings",
+                "image": "Image",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

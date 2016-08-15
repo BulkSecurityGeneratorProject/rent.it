@@ -46,21 +46,16 @@
         },
         {
             "fieldId": 2,
-            "fieldName": "image",
-            "fieldType": "String"
-        },
-        {
-            "fieldId": 3,
             "fieldName": "latitude",
             "fieldType": "String"
         },
         {
-            "fieldId": 4,
+            "fieldId": 3,
             "fieldName": "longitude",
             "fieldType": "String"
         },
         {
-            "fieldId": 5,
+            "fieldId": 4,
             "fieldName": "description",
             "fieldType": "Text"
         }
