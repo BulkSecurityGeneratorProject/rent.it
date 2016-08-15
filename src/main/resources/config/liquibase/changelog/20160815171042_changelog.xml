@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   <changeSet author="opastukhov (generated)" id="1471281051414-1">
+      <createTable tableName="product_images">
+         <column name="products_id" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="image_id" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1471281051414-2">
+      <addPrimaryKey columnNames="products_id, image_id" tableName="product_images"/>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1471281051414-3">
+      <addForeignKeyConstraint baseColumnNames="image_id"
+                               baseTableName="product_images"
+                               constraintName="FK_faiw41ddc6nywa21m1nodqvy5"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="image"/>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1471281051414-4">
+      <addForeignKeyConstraint baseColumnNames="products_id"
+                               baseTableName="product_images"
+                               constraintName="FK_fg73424wlxcx7rgso6dft8dk"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="product"/>
+   </changeSet>
+   <changeSet author="opastukhov (generated)" id="1471281051414-7">
+      <dropColumn columnName="image" tableName="product"/>
+   </changeSet>
+</databaseChangeLog>

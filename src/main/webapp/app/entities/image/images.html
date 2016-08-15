@@ -1,20 +1,20 @@
 <div>
-    <h2 translate="rentitApp.product.home.title">Products</h2>
+    <h2 translate="rentitApp.image.home.title">Images</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-4 no-padding-left">
-                <button class="btn btn-primary" ui-sref="product.new" >
+                <button class="btn btn-primary" ui-sref="image.new" >
                     <span class="glyphicon glyphicon-plus"></span>
-                    <span class="hidden-xs"  translate="rentitApp.product.home.createLabel">
-                        Create new Product
+                    <span class="hidden-xs"  translate="rentitApp.image.home.createLabel">
+                        Create new Image
                     </span>
                 </button>
             </div>
             <div class="col-xs-8 no-padding-right">
                 <form name="searchForm" class="form-inline">
                     <div class="input-group pull-right" >
-                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'rentitApp.product.home.search' | translate }}">
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'rentitApp.image.home.search' | translate }}">
                         <span  class="input-group-btn width-min" >
                             <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
                                 <span class="glyphicon glyphicon-search"></span>
@@ -34,52 +34,36 @@
     <div class="table-responsive">
         <table class="jh-table table table-striped">
             <thead>
-                <tr>
-                    <th><span translate="global.field.id">ID</span></th>
-                    <th><span translate="rentitApp.product.title">Title</span></th>
-                    <th><span translate="rentitApp.product.user">User</span></th>
-                    <th><span translate="rentitApp.product.productAddress">Product Address</span></th>
-                    <th><span translate="rentitApp.product.category">Category</span></th>
-                    <th><span translate="rentitApp.product.tag">Tag</span></th>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span translate="rentitApp.image.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="url"><span translate="rentitApp.image.url">Url</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="type"><span translate="rentitApp.image.type">Type</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="product in vm.products track by product.id">
-                    <td><a ui-sref="product-detail({id:product.id})">{{product.id}}</a></td>
-                    <td>{{product.title}}</td>
-                    <td>
-                        {{product.user.id}}
-                    </td>
-                    <td>
-                        <a ui-sref="product-address-detail({id:product.productAddress.id})">{{product.productAddress.id}}</a>
-                    </td>
-                    <td>
-                        <span ng-repeat="category in product.categories">
-                            <a class="form-control-static" ui-sref="category-detail({id: {{category.id}}})">{{category.title}}</a>{{$last ? '' : ', '}}
-                        </span>
-                    </td>
-                    <td>
-                        <span ng-repeat="tag in product.tags">
-                            <a class="form-control-static" ui-sref="tag-detail({id: {{tag.id}}})">{{tag.name}}</a>{{$last ? '' : ', '}}
-                        </span>
-                    </td>
+                <tr ng-repeat="image in vm.images track by image.id">
+                    <td><a ui-sref="image-detail({id:image.id})">{{image.id}}</a></td>
+                    <td>{{image.name}}</td>
+                    <td>{{image.url}}</td>
+                    <td>{{image.type}}</td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
-                                    ui-sref="product-detail({id:product.id})"
+                                    ui-sref="image-detail({id:image.id})"
                                     class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
                             </button>
                             <button type="submit"
-                                    ui-sref="product.edit({id:product.id})"
+                                    ui-sref="image.edit({id:image.id})"
                                     class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
                             </button>
                             <button type="submit"
-                                    ui-sref="product.delete({id:product.id})"
+                                    ui-sref="image.delete({id:image.id})"
                                     class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
@@ -89,5 +73,9 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
     </div>
 </div>

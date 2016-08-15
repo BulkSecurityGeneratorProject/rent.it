@@ -9,124 +9,146 @@
 
     function stateConfig($stateProvider) {
         $stateProvider
-        .state('product', {
+        .state('image', {
             parent: 'entity',
-            url: '/product',
+            url: '/image?page&sort&search',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'rentitApp.product.home.title'
+                pageTitle: 'rentitApp.image.home.title'
             },
             views: {
                 'content@': {
-                    templateUrl: 'app/entities/product/products.html',
-                    controller: 'ProductController',
+                    templateUrl: 'app/entities/image/images.html',
+                    controller: 'ImageController',
                     controllerAs: 'vm'
                 }
             },
+            params: {
+                page: {
+                    value: '1',
+                    squash: true
+                },
+                sort: {
+                    value: 'id,asc',
+                    squash: true
+                },
+                search: null
+            },
             resolve: {
+                pagingParams: ['$stateParams', 'PaginationUtil', function ($stateParams, PaginationUtil) {
+                    return {
+                        page: PaginationUtil.parsePage($stateParams.page),
+                        sort: $stateParams.sort,
+                        predicate: PaginationUtil.parsePredicate($stateParams.sort),
+                        ascending: PaginationUtil.parseAscending($stateParams.sort),
+                        search: $stateParams.search
+                    };
+                }],
                 translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
-                    $translatePartialLoader.addPart('product');
+                    $translatePartialLoader.addPart('image');
                     $translatePartialLoader.addPart('global');
                     return $translate.refresh();
                 }]
             }
         })
-        .state('product-detail', {
+        .state('image-detail', {
             parent: 'entity',
-            url: '/product/{id}',
+            url: '/image/{id}',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'rentitApp.product.detail.title'
+                pageTitle: 'rentitApp.image.detail.title'
             },
             views: {
                 'content@': {
-                    templateUrl: 'app/entities/product/product-detail.html',
-                    controller: 'ProductDetailController',
+                    templateUrl: 'app/entities/image/image-detail.html',
+                    controller: 'ImageDetailController',
                     controllerAs: 'vm'
                 }
             },
             resolve: {
                 translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
-                    $translatePartialLoader.addPart('product');
+                    $translatePartialLoader.addPart('image');
                     return $translate.refresh();
                 }],
-                entity: ['$stateParams', 'Product', function($stateParams, Product) {
-                    return Product.get({id : $stateParams.id}).$promise;
+                entity: ['$stateParams', 'Image', function($stateParams, Image) {
+                    return Image.get({id : $stateParams.id}).$promise;
                 }]
             }
         })
-        .state('product.new', {
-            parent: 'product',
+        .state('image.new', {
+            parent: 'image',
             url: '/new',
             data: {
                 authorities: ['ROLE_USER']
             },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
-                    templateUrl: 'app/entities/product/product-dialog.html',
-                    controller: 'ProductDialogController',
+                    templateUrl: 'app/entities/image/image-dialog.html',
+                    controller: 'ImageDialogController',
                     controllerAs: 'vm',
                     backdrop: 'static',
                     size: 'lg',
                     resolve: {
                         entity: function () {
                             return {
-                                title: null,
+                                name: null,
+                                url: null,
+                                type: null,
                                 id: null
                             };
                         }
                     }
                 }).result.then(function() {
-                    $state.go('product', null, { reload: true });
+                    $state.go('image', null, { reload: true });
                 }, function() {
-                    $state.go('product');
+                    $state.go('image');
                 });
             }]
         })
-        .state('product.edit', {
-            parent: 'product',
+        .state('image.edit', {
+            parent: 'image',
             url: '/{id}/edit',
             data: {
                 authorities: ['ROLE_USER']
             },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
-                    templateUrl: 'app/entities/product/product-dialog.html',
-                    controller: 'ProductDialogController',
+                    templateUrl: 'app/entities/image/image-dialog.html',
+                    controller: 'ImageDialogController',
                     controllerAs: 'vm',
                     backdrop: 'static',
                     size: 'lg',
                     resolve: {
-                        entity: ['Product', function(Product) {
-                            return Product.get({id : $stateParams.id}).$promise;
+                        entity: ['Image', function(Image) {
+                            return Image.get({id : $stateParams.id}).$promise;
                         }]
                     }
                 }).result.then(function() {
-                    $state.go('product', null, { reload: true });
+                    $state.go('image', null, { reload: true });
                 }, function() {
                     $state.go('^');
                 });
             }]
         })
-        .state('product.delete', {
-            parent: 'product',
+        .state('image.delete', {
+            parent: 'image',
             url: '/{id}/delete',
             data: {
                 authorities: ['ROLE_USER']
             },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
-                    templateUrl: 'app/entities/product/product-delete-dialog.html',
-                    controller: 'ProductDeleteController',
+                    templateUrl: 'app/entities/image/image-delete-dialog.html',
+                    controller: 'ImageDeleteController',
                     controllerAs: 'vm',
                     size: 'md',
                     resolve: {
-                        entity: ['Product', function(Product) {
-                            return Product.get({id : $stateParams.id}).$promise;
+                        entity: ['Image', function(Image) {
+                            return Image.get({id : $stateParams.id}).$promise;
                         }]
                     }
                 }).result.then(function() {
-                    $state.go('product', null, { reload: true });
+                    $state.go('image', null, { reload: true });
                 }, function() {
                     $state.go('^');
                 });

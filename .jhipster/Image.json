@@ -1,0 +1,31 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "product_image",
+            "otherEntityName": "product",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "image"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "url",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160815163118",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "image",
+    "pagination": "pagination"
+}
