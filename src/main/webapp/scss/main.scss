@@ -79,6 +79,15 @@ Logo styles
 /* ==========================================================================
 Main page styles
 ========================================================================== */
+header {
+    background: url('/content/images/bg_1.jpg') 9% top no-repeat;
+    background-size:cover!important;
+}
+
+header .no-background {
+    background: none;
+}
+
 .hero-unit {
     margin: 50px auto 0 auto;
     width: 300px;

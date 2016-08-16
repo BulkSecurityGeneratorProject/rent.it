@@ -21,8 +21,7 @@
 </head>
 <body ng-app="rentitApp" ng-strict-di>
 
-<header class=""  style="background: url('/content/images/bg_1.jpg')
-9% top no-repeat; background-size:cover!important;"  />
+<header ng-class="{no-background: vm.$state.includes('admin')}"/>
 
 
     <!--[if lt IE 9]>
