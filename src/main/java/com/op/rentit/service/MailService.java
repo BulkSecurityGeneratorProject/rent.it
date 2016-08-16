@@ -3,6 +3,7 @@ package com.op.rentit.service;
 import com.op.rentit.config.JHipsterProperties;
 import com.op.rentit.domain.User;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.CharEncoding;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,11 +27,10 @@ import java.util.Locale;
  * We use the @Async annotation to send e-mails asynchronously.
  * </p>
  */
+@Slf4j
 @Service
 public class MailService {
 
-    private final Logger log = LoggerFactory.getLogger(MailService.class);
-    
     private static final String USER = "user";
     private static final String BASE_URL = "baseUrl";
 
@@ -101,7 +101,7 @@ public class MailService {
         String subject = messageSource.getMessage("email.reset.title", null, locale);
         sendEmail(user.getEmail(), subject, content, false, true);
     }
-    
+
     @Async
     public void sendSocialRegistrationValidationEmail(User user, String provider) {
         log.debug("Sending social registration validation e-mail to '{}'", user.getEmail());

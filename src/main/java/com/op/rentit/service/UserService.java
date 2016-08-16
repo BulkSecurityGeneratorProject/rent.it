@@ -9,6 +9,7 @@ import com.op.rentit.security.AuthoritiesConstants;
 import com.op.rentit.security.SecurityUtils;
 import com.op.rentit.service.util.RandomUtil;
 import com.op.rentit.web.rest.dto.ManagedUserDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -22,14 +23,10 @@ import java.time.ZonedDateTime;
 import javax.inject.Inject;
 import java.util.*;
 
-/**
- * Service class for managing users.
- */
+@Slf4j
 @Service
 @Transactional
 public class UserService {
-
-    private final Logger log = LoggerFactory.getLogger(UserService.class);
 
     @Inject
     private SocialService socialService;

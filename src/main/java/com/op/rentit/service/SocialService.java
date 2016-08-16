@@ -5,6 +5,7 @@ import com.op.rentit.domain.User;
 import com.op.rentit.repository.AuthorityRepository;
 import com.op.rentit.repository.UserRepository;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -22,9 +23,9 @@ import java.util.Locale;
 import java.util.Optional;
 import java.util.Set;
 
+@Slf4j
 @Service
 public class SocialService {
-    private final Logger log = LoggerFactory.getLogger(SocialService.class);
 
     @Inject
     private UsersConnectionRepository usersConnectionRepository;

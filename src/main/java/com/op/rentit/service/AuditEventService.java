@@ -3,6 +3,8 @@ package com.op.rentit.service;
 import com.op.rentit.config.audit.AuditEventConverter;
 import com.op.rentit.repository.PersistenceAuditEventRepository;
 import java.time.LocalDateTime;
+
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,6 +20,7 @@ import java.util.Optional;
  * This is the default implementation to support SpringBoot Actuator AuditEventRepository
  * </p>
  */
+@Slf4j
 @Service
 @Transactional
 public class AuditEventService {
