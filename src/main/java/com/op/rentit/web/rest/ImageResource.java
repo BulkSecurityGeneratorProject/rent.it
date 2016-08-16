@@ -5,19 +5,26 @@ import com.op.rentit.domain.Image;
 import com.op.rentit.service.ImageService;
 import com.op.rentit.web.rest.util.HeaderUtil;
 import com.op.rentit.web.rest.util.PaginationUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -25,18 +32,48 @@ import java.util.stream.StreamSupport;
 
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
-/**
- * REST controller for managing Image.
- */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class ImageResource {
 
-    private final Logger log = LoggerFactory.getLogger(ImageResource.class);
-        
+    public static final String ROOT = "upload-dir";
+
+    private final ResourceLoader resourceLoader;
+
     @Inject
     private ImageService imageService;
-    
+
+    @Autowired
+    public ImageResource(ResourceLoader resourceLoader) {
+        this.resourceLoader = resourceLoader;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/imgload")
+    @Timed
+    public String provideUploadInfo(Model model) throws IOException {
+
+        model.addAttribute("files", Files.walk(Paths.get(ROOT))
+            .filter(path -> !path.equals(Paths.get(ROOT)))
+            .map(path -> Paths.get(ROOT).relativize(path))
+            .collect(Collectors.toList()));
+
+        return "uploadForm";
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/imgload/{filename:.+}")
+    @ResponseBody
+    @Timed
+    public ResponseEntity<?> getFile(@PathVariable String filename) {
+
+        try {
+            return ResponseEntity.ok(resourceLoader.getResource("file:" + Paths.get(ROOT, filename).toString()));
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
     /**
      * POST  /images : Create a new image.
      *
@@ -97,7 +134,7 @@ public class ImageResource {
     public ResponseEntity<List<Image>> getAllImages(Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to get a page of Images");
-        Page<Image> page = imageService.findAll(pageable); 
+        Page<Image> page = imageService.findAll(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/images");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }

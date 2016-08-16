@@ -72,7 +72,7 @@ public class ImageResourceIntTest {
     @PostConstruct
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        ImageResource imageResource = new ImageResource();
+        ImageResource imageResource = new ImageResource(null);
         ReflectionTestUtils.setField(imageResource, "imageService", imageService);
         this.restImageMockMvc = MockMvcBuilders.standaloneSetup(imageResource)
             .setCustomArgumentResolvers(pageableArgumentResolver)
