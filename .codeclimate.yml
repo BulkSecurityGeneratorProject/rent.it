@@ -7,6 +7,6 @@ exclude_paths:
 - "src/main/webapp/bower_components"
 engines:
   eslint:
-    enabled: false
+    enabled: true
   duplication:
     enabled: false
