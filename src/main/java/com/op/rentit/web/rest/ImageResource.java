@@ -18,6 +18,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -37,7 +39,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 @RequestMapping("/api")
 public class ImageResource {
 
-    public static final String ROOT = "upload-dir";
+    public static final String ROOT = "d:\\Projects\\rentit2\\target\\upload-dir";
 
     private final ResourceLoader resourceLoader;
 
@@ -49,30 +51,23 @@ public class ImageResource {
         this.resourceLoader = resourceLoader;
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/imgload")
-    @Timed
-    public String provideUploadInfo(Model model) throws IOException {
-
-        model.addAttribute("files", Files.walk(Paths.get(ROOT))
-            .filter(path -> !path.equals(Paths.get(ROOT)))
-            .map(path -> Paths.get(ROOT).relativize(path))
-            .collect(Collectors.toList()));
-
-        return "uploadForm";
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/imgload/{filename:.+}")
-    @ResponseBody
-    @Timed
-    public ResponseEntity<?> getFile(@PathVariable String filename) {
-
-        try {
-            return ResponseEntity.ok(resourceLoader.getResource("file:" + Paths.get(ROOT, filename).toString()));
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
+    @RequestMapping(method = RequestMethod.POST, value = "/imgload")
+    public String handleFileUpload(@RequestParam("file") MultipartFile file,
+                                   RedirectAttributes redirectAttributes) {
+        if (!file.isEmpty()) {
+            try {
+                Files.copy(file.getInputStream(), Paths.get(ROOT, file.getOriginalFilename()));
+                redirectAttributes.addFlashAttribute("message",
+                    "You successfully uploaded " + file.getOriginalFilename() + "!");
+            } catch (IOException|RuntimeException e) {
+                redirectAttributes.addFlashAttribute("message", "Failued to upload " + file.getOriginalFilename() + " => " + e.getMessage());
+            }
+        } else {
+            redirectAttributes.addFlashAttribute("message", "Failed to upload " + file.getOriginalFilename() + " because it was empty");
         }
-    }
 
+        return "redirect:/";
+    }
 
     /**
      * POST  /images : Create a new image.

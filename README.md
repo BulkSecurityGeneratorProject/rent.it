@@ -2,6 +2,7 @@
 Rent.IT Project
 System for renting anything.
 [![GitHub release](https://img.shields.io/github/release/picaro/rent.it.svg?maxAge=2592000)](https://github.com/picaro/rent.it/releases)
+[![Dependency Status](https://gemnasium.com/badges/github.com/WorkingBricks/rent.it.svg)](https://gemnasium.com/github.com/WorkingBricks/rent.it)
 
 ## Mindmap with ideas
 https://www.mindmup.com/#m:a11b08d3802ace013411251d36ac3dd6cf  V1
