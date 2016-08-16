@@ -5,3 +5,8 @@ languages:
   Python: true
 exclude_paths:
 - "src/main/webapp/bower_components"
+engines:
+  eslint:
+    enabled: false
+  duplication:
+    enabled: false
