@@ -18,7 +18,7 @@ public final class Constants {
 
     public static final String SYSTEM_ACCOUNT = "system";
 
-    public static final String IMG_BASE_DIR = "/uploadedimg"; //TODO Move it to the settings
+    public static final String IMG_BASE_DIR = "uploadedimg"; 
 
     private Constants() {
     }
