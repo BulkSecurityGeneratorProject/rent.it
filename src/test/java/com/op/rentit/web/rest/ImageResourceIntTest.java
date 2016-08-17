@@ -92,7 +92,6 @@ public class ImageResourceIntTest {
         image.setType(DEFAULT_TYPE);
     }
 
-    @Ignore
     @Test
     @Transactional
     public void checkThatWeCouldUploadImage() throws Exception {
@@ -100,14 +99,12 @@ public class ImageResourceIntTest {
 
         // Create the Image
         MockMultipartFile firstFile = new MockMultipartFile("data", "filename.txt", "text/plain", "some xml".getBytes());
-        MockMultipartFile secondFile = new MockMultipartFile("data", "other-file-name.data", "text/plain", "some other type".getBytes());
-        MockMultipartFile jsonFile = new MockMultipartFile("json", "", "application/json", "{\"json\": \"someValue\"}".getBytes());
 
         restImageMockMvc.perform(MockMvcRequestBuilders.fileUpload("/api/imgload")
             .file("file",firstFile.getBytes()))
             .andDo(print())
             .andExpect(status().is(200))
-            .andExpect(content().string("\"success\""));
+            .andExpect(jsonPath("$.name").value("file"));
 
         List<Image> images = imageRepository.findAll();
         assertThat(images).hasSize(databaseSizeBeforeCreate + 1);

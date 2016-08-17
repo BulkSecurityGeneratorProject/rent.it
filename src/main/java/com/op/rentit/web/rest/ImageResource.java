@@ -6,8 +6,7 @@ import com.op.rentit.service.ImageService;
 import com.op.rentit.web.rest.util.HeaderUtil;
 import com.op.rentit.web.rest.util.PaginationUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.data.domain.Page;
@@ -16,12 +15,12 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.inject.Inject;
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -29,36 +28,32 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 @Slf4j
 @RestController
 @RequestMapping("/api")
 public class ImageResource {
 
-    public static final String ROOT = "d:\\Projects\\rentit2\\target\\upload-dir";
+    public static final String IMG_BASE_DIR = "/uploaded_images"; //TODO Move it to the settings
+    //TODO - what if we will exceed limit of files in one dir?
 
-    private final ResourceLoader resourceLoader;
-
-    @Inject
-    private ImageService imageService;
+    private final ResourceLoader resourceLoader;// TODO see no usage. Check
 
     @Autowired
     public ImageResource(ResourceLoader resourceLoader) {
         this.resourceLoader = resourceLoader;
     }
 
+    @Inject
+    private ImageService imageService;
+
     @RequestMapping(method = RequestMethod.POST, value = "/imgload")
     public Image handleFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) {
-        Image image = new Image();
         if (!file.isEmpty()) {
             try {
-                Files.copy(file.getInputStream(), Paths.get(ROOT, file.getOriginalFilename()));
-                image.setName(file.getName());
+                Files.copy(file.getInputStream(), Paths.get(IMG_BASE_DIR, file.getOriginalFilename()));
+                return saveImageDescToDB(file);
             } catch (IOException|RuntimeException e) {
                 redirectAttributes.addFlashAttribute("message", "Failued to upload " + file.getOriginalFilename() + " => " + e.getMessage());
             }
@@ -66,7 +61,15 @@ public class ImageResource {
             redirectAttributes.addFlashAttribute("message", "Failed to upload " + file.getOriginalFilename() + " because it was empty");
         }
 
-        return image;
+        return null;
+    }
+
+    private Image saveImageDescToDB(@RequestParam("file") MultipartFile file) {
+        Image image = new Image();
+        image.setName(file.getName());
+        image.setType(FilenameUtils.getExtension(file.getName()));
+        image.setUrl(IMG_BASE_DIR + File.separator + file.getName());
+        return imageService.save(image);
     }
 
     /**

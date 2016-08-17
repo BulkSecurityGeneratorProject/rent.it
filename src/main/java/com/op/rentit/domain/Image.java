@@ -34,9 +34,4 @@ public class Image implements Serializable {
     @Column(name = "type")
     private String type;
 
-    @ManyToMany(mappedBy = "images")
-    @JsonIgnore
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<Product> product_images = new HashSet<>();
-
 }

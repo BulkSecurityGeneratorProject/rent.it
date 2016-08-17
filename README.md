@@ -7,6 +7,7 @@ System for renting anything.
 [![Dependency Status](https://gemnasium.com/badges/github.com/WorkingBricks/rent.it.svg?maxAge=259200)](https://gemnasium.com/github.com/WorkingBricks/rent.it)
 [![Code Climate](https://codeclimate.com/github/WorkingBricks/rent.it/badges/gpa.svg?maxAge=259200)](https://codeclimate.com/github/WorkingBricks/rent.it)
 [![Issue Count](https://codeclimate.com/github/WorkingBricks/rent.it/badges/issue_count.svg?maxAge=259200)](https://codeclimate.com/github/WorkingBricks/rent.it)
+
 [![Prod Up Time](https://i.h-t.co/dns%20test.png?id=67ad7bf4-8641-4dbb-bfd9-def218a62441)](http://www.host-tracker.com/UptimeGraph/UptimeInfo/67ad7bf4-8641-4dbb-bfd9-def218a62441)
 
 ## Mindmap with ideas
@@ -48,6 +49,7 @@ you could add custom metrics
 [![codecov](https://codecov.io/gh/WorkingBricks/rent.it/branch/master/graph/badge.svg)](https://codecov.io/gh/WorkingBricks/rent.it)
 
 For 17.08.2016 by IDEA
+
 class	68% (103/150)	
 method  63% (503/797)	
 line    59% (1683/2849)
@@ -59,6 +61,7 @@ UI Coverage:
 [![Test Coverage](https://codeclimate.com/github/WorkingBricks/rent.it/badges/coverage.svg)](https://codeclimate.com/github/WorkingBricks/rent.it/coverage)
 
 gulp test
+
 codeclimate-test-reporter < target/test-results/coverage/report-lcov/lcov.info  
 
 ### Rest API Documents
