@@ -7,6 +7,7 @@ import com.op.rentit.service.ImageService;
 import com.op.rentit.repository.search.ImageSearchRepository;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import static org.hamcrest.Matchers.hasItem;
@@ -16,10 +17,12 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.data.web.PageableHandlerMethodArgumentResolver;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,6 +32,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
@@ -86,6 +90,27 @@ public class ImageResourceIntTest {
         image.setName(DEFAULT_NAME);
         image.setUrl(DEFAULT_URL);
         image.setType(DEFAULT_TYPE);
+    }
+
+    @Ignore
+    @Test
+    @Transactional
+    public void checkThatWeCouldUploadImage() throws Exception {
+        int databaseSizeBeforeCreate = imageRepository.findAll().size();
+
+        // Create the Image
+        MockMultipartFile firstFile = new MockMultipartFile("data", "filename.txt", "text/plain", "some xml".getBytes());
+        MockMultipartFile secondFile = new MockMultipartFile("data", "other-file-name.data", "text/plain", "some other type".getBytes());
+        MockMultipartFile jsonFile = new MockMultipartFile("json", "", "application/json", "{\"json\": \"someValue\"}".getBytes());
+
+        restImageMockMvc.perform(MockMvcRequestBuilders.fileUpload("/api/imgload")
+            .file("file",firstFile.getBytes()))
+            .andDo(print())
+            .andExpect(status().is(200))
+            .andExpect(content().string("\"success\""));
+
+        List<Image> images = imageRepository.findAll();
+        assertThat(images).hasSize(databaseSizeBeforeCreate + 1);
     }
 
     @Test

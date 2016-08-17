@@ -52,13 +52,13 @@ public class ImageResource {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/imgload")
-    public String handleFileUpload(@RequestParam("file") MultipartFile file,
+    public Image handleFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) {
+        Image image = new Image();
         if (!file.isEmpty()) {
             try {
                 Files.copy(file.getInputStream(), Paths.get(ROOT, file.getOriginalFilename()));
-                redirectAttributes.addFlashAttribute("message",
-                    "You successfully uploaded " + file.getOriginalFilename() + "!");
+                image.setName(file.getName());
             } catch (IOException|RuntimeException e) {
                 redirectAttributes.addFlashAttribute("message", "Failued to upload " + file.getOriginalFilename() + " => " + e.getMessage());
             }
@@ -66,7 +66,7 @@ public class ImageResource {
             redirectAttributes.addFlashAttribute("message", "Failed to upload " + file.getOriginalFilename() + " because it was empty");
         }
 
-        return "redirect:/";
+        return image;
     }
 
     /**

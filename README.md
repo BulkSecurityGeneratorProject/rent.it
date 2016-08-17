@@ -42,7 +42,7 @@ you could add custom commands
 you could add custom metrics
 
 ### Code coverage
-[![Coverage Status](http://coveralls.io/repos/github/picaro/rent.it/badge.svg?branch=master)](https://coveralls.io/github/picaro/rent.it?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/WorkingBricks/rent.it/badge.svg?branch=master)](https://coveralls.io/github/WorkingBricks/rent.it?branch=master)
 
 mvn cobertura:cobertura coveralls:report
 https://codecov.io/gh/picaro/rent.it
