@@ -4,9 +4,10 @@ System for renting anything.
 
 
 [![GitHub release](https://img.shields.io/github/tag/picaro/rent.it.svg?maxAge=2592000)](https://github.com/picaro/rent.it/tags)
-[![Dependency Status](https://gemnasium.com/badges/github.com/WorkingBricks/rent.it.svg?maxAge=2592000)](https://gemnasium.com/github.com/WorkingBricks/rent.it)
-[![Code Climate](https://codeclimate.com/github/WorkingBricks/rent.it/badges/gpa.svg?maxAge=2592000)](https://codeclimate.com/github/WorkingBricks/rent.it)
-[![Issue Count](https://codeclimate.com/github/WorkingBricks/rent.it/badges/issue_count.svg?maxAge=2592000)](https://codeclimate.com/github/WorkingBricks/rent.it)
+[![Dependency Status](https://gemnasium.com/badges/github.com/WorkingBricks/rent.it.svg?maxAge=259200)](https://gemnasium.com/github.com/WorkingBricks/rent.it)
+[![Code Climate](https://codeclimate.com/github/WorkingBricks/rent.it/badges/gpa.svg?maxAge=259200)](https://codeclimate.com/github/WorkingBricks/rent.it)
+[![Issue Count](https://codeclimate.com/github/WorkingBricks/rent.it/badges/issue_count.svg?maxAge=259200)](https://codeclimate.com/github/WorkingBricks/rent.it)
+[![Prod Up Time](https://i.h-t.co/dns%20test.png?id=67ad7bf4-8641-4dbb-bfd9-def218a62441)](http://www.host-tracker.com/UptimeGraph/UptimeInfo/67ad7bf4-8641-4dbb-bfd9-def218a62441)
 
 ## Mindmap with ideas
 https://www.mindmup.com/#m:a11b08d3802ace013411251d36ac3dd6cf  V1
@@ -52,12 +53,11 @@ method  63% (503/797)
 line    59% (1683/2849)
 
 mvn clean test jacoco:report coveralls:report
-
+gulp test
 
 ### Rest API Documents
 
-* <http://127.0.0.1:8080/swagger-ui.html> - API Description
-* <http://127.0.0.1:8080/browser/index.html> - API tester
+* <http://localhost:8080/swagger-ui/index.html> - API Description
 
 ### What is this repository for? ###
 Application to lend any stuff.
