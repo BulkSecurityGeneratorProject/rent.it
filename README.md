@@ -6,6 +6,7 @@ System for renting anything.
 [![GitHub release](https://img.shields.io/github/tag/picaro/rent.it.svg?maxAge=2592000)](https://github.com/picaro/rent.it/tags)
 [![Dependency Status](https://gemnasium.com/badges/github.com/WorkingBricks/rent.it.svg)](https://gemnasium.com/github.com/WorkingBricks/rent.it)
 [![Code Climate](https://codeclimate.com/github/WorkingBricks/rent.it/badges/gpa.svg)](https://codeclimate.com/github/WorkingBricks/rent.it)
+[![Issue Count](https://codeclimate.com/github/WorkingBricks/rent.it/badges/issue_count.svg)](https://codeclimate.com/github/WorkingBricks/rent.it)
 
 ## Mindmap with ideas
 https://www.mindmup.com/#m:a11b08d3802ace013411251d36ac3dd6cf  V1
