@@ -80,5 +80,10 @@ Application to lend any stuff.
 * How to run tests
 * Deployment instructions
 
+Minimum requirements 
+* Java 8
+* Maven 3
+
 ### LICENSE 
 [![License (CC BY-NC-ND)](https://github.com/picaro/rent.it/blob/master/logos/by-nc-nd.png)](http://creativecommons.org/licenses/by-nc/4.0/)
+
