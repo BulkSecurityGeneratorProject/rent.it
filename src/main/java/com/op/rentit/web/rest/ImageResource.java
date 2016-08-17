@@ -43,8 +43,8 @@ public class ImageResource {
                                    RedirectAttributes redirectAttributes) {
         if (!file.isEmpty()) {
             try {
-                //new File(Constants.IMG_BASE_DIR).mkdir();
-                Files.copy(file.getInputStream(), Paths.get(Constants.IMG_BASE_DIR, file.getOriginalFilename()));
+                new File(Constants.IMG_BASE_DIR).mkdir();
+                Files.copy(file.getInputStream(), Paths.get(Constants.IMG_BASE_DIR,"fff.jpg"));
                 return saveImageDescToDB(file);
             } catch (IOException|RuntimeException e) {
                 redirectAttributes.addFlashAttribute("message", "Failued to upload " + file.getOriginalFilename() + " => " + e.getMessage());
