@@ -1,6 +1,7 @@
 package com.op.rentit.web.rest;
 
 import com.op.rentit.RentitApp;
+import com.op.rentit.config.Constants;
 import com.op.rentit.domain.Image;
 import com.op.rentit.repository.ImageRepository;
 import com.op.rentit.service.ImageService;
@@ -28,6 +29,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import java.io.File;
+import java.nio.file.Paths;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -105,6 +108,8 @@ public class ImageResourceIntTest {
             .andDo(print())
             .andExpect(status().is(200))
             .andExpect(jsonPath("$.name").value("file"));
+
+        new File(Paths.get(Constants.IMG_BASE_DIR,"file").toString()).delete();
 
         List<Image> images = imageRepository.findAll();
         assertThat(images).hasSize(databaseSizeBeforeCreate + 1);
