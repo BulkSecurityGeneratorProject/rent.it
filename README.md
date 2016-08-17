@@ -53,7 +53,13 @@ method  63% (503/797)
 line    59% (1683/2849)
 
 mvn clean test jacoco:report coveralls:report
+
+
+UI Coverage: 
+[![Test Coverage](https://codeclimate.com/github/WorkingBricks/rent.it/badges/coverage.svg)](https://codeclimate.com/github/WorkingBricks/rent.it/coverage)
+
 gulp test
+codeclimate-test-reporter < target/test-results/coverage/report-lcov/lcov.info  
 
 ### Rest API Documents
 
