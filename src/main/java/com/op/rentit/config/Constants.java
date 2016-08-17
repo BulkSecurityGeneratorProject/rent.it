@@ -1,8 +1,5 @@
 package com.op.rentit.config;
 
-/**
- * Application constants.
- */
 public final class Constants {
 
     //Regex for acceptable logins
@@ -20,6 +17,8 @@ public final class Constants {
     public static final String SPRING_PROFILE_NO_LIQUIBASE = "no-liquibase";
 
     public static final String SYSTEM_ACCOUNT = "system";
+
+    public static final String IMG_BASE_DIR = "/uploadedimg"; //TODO Move it to the settings
 
     private Constants() {
     }

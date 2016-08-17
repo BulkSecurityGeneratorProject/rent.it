@@ -1,6 +1,7 @@
 package com.op.rentit.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+import com.op.rentit.config.Constants;
 import com.op.rentit.domain.Image;
 import com.op.rentit.service.ImageService;
 import com.op.rentit.web.rest.util.HeaderUtil;
@@ -34,16 +35,6 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class ImageResource {
 
-    public static final String IMG_BASE_DIR = "/uploaded_images"; //TODO Move it to the settings
-    //TODO - what if we will exceed limit of files in one dir?
-
-    private final ResourceLoader resourceLoader;// TODO see no usage. Check
-
-    @Autowired
-    public ImageResource(ResourceLoader resourceLoader) {
-        this.resourceLoader = resourceLoader;
-    }
-
     @Inject
     private ImageService imageService;
 
@@ -52,7 +43,7 @@ public class ImageResource {
                                    RedirectAttributes redirectAttributes) {
         if (!file.isEmpty()) {
             try {
-                Files.copy(file.getInputStream(), Paths.get(IMG_BASE_DIR, file.getOriginalFilename()));
+                Files.copy(file.getInputStream(), Paths.get(Constants.IMG_BASE_DIR, file.getOriginalFilename()));
                 return saveImageDescToDB(file);
             } catch (IOException|RuntimeException e) {
                 redirectAttributes.addFlashAttribute("message", "Failued to upload " + file.getOriginalFilename() + " => " + e.getMessage());
@@ -68,7 +59,7 @@ public class ImageResource {
         Image image = new Image();
         image.setName(file.getName());
         image.setType(FilenameUtils.getExtension(file.getName()));
-        image.setUrl(IMG_BASE_DIR + File.separator + file.getName());
+        image.setUrl(Constants.IMG_BASE_DIR + File.separator + file.getName());
         return imageService.save(image);
     }
 
