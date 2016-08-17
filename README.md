@@ -44,9 +44,10 @@ you could add custom metrics
 
 ### Code coverage
 [![Coverage Status](https://coveralls.io/repos/github/WorkingBricks/rent.it/badge.svg?branch=master)](https://coveralls.io/github/WorkingBricks/rent.it?branch=master)
+[![codecov](https://codecov.io/gh/WorkingBricks/rent.it/branch/master/graph/badge.svg)](https://codecov.io/gh/WorkingBricks/rent.it)
 
-mvn cobertura:cobertura coveralls:report
-https://codecov.io/gh/picaro/rent.it
+mvn clean test jacoco:report coveralls:report
+
 
 ### Rest API Documents
 
