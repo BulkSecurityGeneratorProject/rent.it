@@ -1,9 +1,7 @@
 languages:
   JavaScript: true
 exclude_paths:
-	  - "spec/*"
-	  - "src/main/webapp/bower_components/**"
-	  - enabled.yml
-	  - disabled.yml
-	  - .rubocop.yml
-	  - .codeclimate.yml
+  - "spec/*"
+  - "src/main/webapp/bower_components/**"
+  - enabled.yml
+  - disabled.yml
