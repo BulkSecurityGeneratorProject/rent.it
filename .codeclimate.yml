@@ -1,4 +1,10 @@
 engines:
+  csslint:
+    enabled: true
+  coffeelint:
+    enabled: true
+  fixme:
+    enabled: true
   eslint:
     enabled: true
   fixme:
