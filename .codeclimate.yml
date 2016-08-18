@@ -5,3 +5,11 @@ exclude_paths:
   - "src/main/webapp/bower_components/**"
   - enabled.yml
   - disabled.yml
+engines:
+  # ... CONFIG CONTENT ...
+  duplication:
+    enabled: true
+    # ... CONFIG CONTENT ...
+    checks:
+      Similar code:
+        enabled: false
