@@ -13,6 +13,10 @@ System for renting anything.
 ## Mindmap with ideas
 https://www.mindmup.com/#m:a11b08d3802ace013411251d36ac3dd6cf  V1
 
+## Mockups
+https://mockingbot.com/workspace#apps/p73F8076A6D1471496443580 
+** ASK form password
+
 ## Build
 1) With environment in the Docker
 ./mvnw clean package -Pprod docker:build
@@ -27,6 +31,8 @@ This command will start up your application and the services it relies on (datab
 
 2) Standalone
 java -jar target/*.war --spring.profiles.active=prod 
+
+* ASK for environment variables
 
 ## Project Tasks
 https://trello.com/b/yLbmjvrm/rent-it
