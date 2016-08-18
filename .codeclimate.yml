@@ -1,22 +1,3 @@
-engines:
-  csslint:
-    enabled: true
-  coffeelint:
-    enabled: true
-  fixme:
-    enabled: true
-  eslint:
-    enabled: true
-  fixme:
-    enabled: true
-  duplication:
-    enabled: true
-    config:
-        languages:
-        - JavaScript
-    checks:
-      Similar code:
-        enabled: false
 languages:
   JavaScript: true
 exclude_paths:
