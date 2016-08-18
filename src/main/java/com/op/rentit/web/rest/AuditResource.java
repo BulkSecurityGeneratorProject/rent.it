@@ -4,6 +4,7 @@ import com.op.rentit.service.AuditEventService;
 
 import java.time.LocalDate;
 import com.op.rentit.web.rest.util.PaginationUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,6 +22,7 @@ import java.util.List;
 /**
  * REST controller for getting the audit events.
  */
+@Slf4j
 @RestController
 @RequestMapping(value = "/management/jhipster/audits", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AuditResource {

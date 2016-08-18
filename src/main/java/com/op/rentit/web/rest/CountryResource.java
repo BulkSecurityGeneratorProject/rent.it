@@ -5,6 +5,7 @@ import com.op.rentit.domain.Country;
 import com.op.rentit.repository.CountryRepository;
 import com.op.rentit.repository.search.CountrySearchRepository;
 import com.op.rentit.web.rest.util.HeaderUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -26,18 +27,17 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 /**
  * REST controller for managing Country.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class CountryResource {
 
-    private final Logger log = LoggerFactory.getLogger(CountryResource.class);
-        
     @Inject
     private CountryRepository countryRepository;
-    
+
     @Inject
     private CountrySearchRepository countrySearchRepository;
-    
+
     /**
      * POST  /countries : Create a new country.
      *

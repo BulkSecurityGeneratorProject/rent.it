@@ -5,6 +5,7 @@ import com.op.rentit.domain.WishList;
 import com.op.rentit.repository.WishListRepository;
 import com.op.rentit.repository.search.WishListSearchRepository;
 import com.op.rentit.web.rest.util.HeaderUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -26,18 +27,17 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 /**
  * REST controller for managing WishList.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class WishListResource {
 
-    private final Logger log = LoggerFactory.getLogger(WishListResource.class);
-        
     @Inject
     private WishListRepository wishListRepository;
-    
+
     @Inject
     private WishListSearchRepository wishListSearchRepository;
-    
+
     /**
      * POST  /wish-lists : Create a new wishList.
      *

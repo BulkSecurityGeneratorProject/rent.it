@@ -5,6 +5,7 @@ import com.op.rentit.domain.Currency;
 import com.op.rentit.repository.CurrencyRepository;
 import com.op.rentit.repository.search.CurrencySearchRepository;
 import com.op.rentit.web.rest.util.HeaderUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -26,18 +27,17 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 /**
  * REST controller for managing Currency.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class CurrencyResource {
 
-    private final Logger log = LoggerFactory.getLogger(CurrencyResource.class);
-        
     @Inject
     private CurrencyRepository currencyRepository;
-    
+
     @Inject
     private CurrencySearchRepository currencySearchRepository;
-    
+
     /**
      * POST  /currencies : Create a new currency.
      *

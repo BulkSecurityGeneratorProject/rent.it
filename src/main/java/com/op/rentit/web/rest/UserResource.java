@@ -13,6 +13,7 @@ import com.op.rentit.service.UserService;
 import com.op.rentit.web.rest.dto.ManagedUserDTO;
 import com.op.rentit.web.rest.util.HeaderUtil;
 import com.op.rentit.web.rest.util.PaginationUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -59,11 +60,10 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
  * </ul>
  * <p>Another option would be to have a specific JPA entity graph to handle this case.</p>
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class UserResource {
-
-    private final Logger log = LoggerFactory.getLogger(UserResource.class);
 
     @Inject
     private UserRepository userRepository;
@@ -175,7 +175,7 @@ public class UserResource {
 
     /**
      * GET  /users : get all users.
-     * 
+     *
      * @param pageable the pagination information
      * @return the ResponseEntity with status 200 (OK) and with body all users
      * @throws URISyntaxException if the pagination headers couldnt be generated

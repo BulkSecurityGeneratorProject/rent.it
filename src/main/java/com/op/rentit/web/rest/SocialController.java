@@ -2,6 +2,7 @@ package com.op.rentit.web.rest;
 
 import com.op.rentit.service.SocialService;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,10 +15,10 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import javax.inject.Inject;
 
+@Slf4j
 @RestController
 @RequestMapping("/social")
 public class SocialController {
-    private final Logger log = LoggerFactory.getLogger(SocialController.class);
 
     @Inject
     private SocialService socialService;

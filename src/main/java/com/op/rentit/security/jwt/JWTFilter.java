@@ -5,6 +5,7 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
@@ -18,9 +19,8 @@ import io.jsonwebtoken.ExpiredJwtException;
  * Filters incoming requests and installs a Spring Security principal if a header corresponding to a valid user is
  * found.
  */
+@Slf4j
 public class JWTFilter extends GenericFilterBean {
-
-    private final Logger log = LoggerFactory.getLogger(JWTFilter.class);
 
     private TokenProvider tokenProvider;
 
@@ -53,7 +53,7 @@ public class JWTFilter extends GenericFilterBean {
             String jwt = bearerToken.substring(7, bearerToken.length());
             return jwt;
         }
-        
+
         String jwt = request.getParameter(JWTConfigurer.AUTHORIZATION_TOKEN);
         if(StringUtils.hasText(jwt)) {
             return jwt;

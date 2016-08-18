@@ -5,6 +5,7 @@ import com.op.rentit.domain.Booking;
 import com.op.rentit.repository.BookingRepository;
 import com.op.rentit.repository.search.BookingSearchRepository;
 import com.op.rentit.web.rest.util.HeaderUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -26,18 +27,17 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 /**
  * REST controller for managing Booking.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class BookingResource {
 
-    private final Logger log = LoggerFactory.getLogger(BookingResource.class);
-        
     @Inject
     private BookingRepository bookingRepository;
-    
+
     @Inject
     private BookingSearchRepository bookingSearchRepository;
-    
+
     /**
      * POST  /bookings : Create a new booking.
      *

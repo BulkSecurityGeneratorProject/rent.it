@@ -5,6 +5,7 @@ import com.op.rentit.domain.UserAddress;
 import com.op.rentit.repository.UserAddressRepository;
 import com.op.rentit.repository.search.UserAddressSearchRepository;
 import com.op.rentit.web.rest.util.HeaderUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -26,18 +27,17 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 /**
  * REST controller for managing UserAddress.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class UserAddressResource {
 
-    private final Logger log = LoggerFactory.getLogger(UserAddressResource.class);
-        
     @Inject
     private UserAddressRepository userAddressRepository;
-    
+
     @Inject
     private UserAddressSearchRepository userAddressSearchRepository;
-    
+
     /**
      * POST  /user-addresses : Create a new userAddress.
      *

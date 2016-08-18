@@ -1,8 +1,8 @@
 package com.op.rentit.security;
 
-/**
- * Constants for Spring Security authorities.
- */
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public final class AuthoritiesConstants {
 
     public static final String ADMIN = "ROLE_ADMIN";
@@ -11,6 +11,4 @@ public final class AuthoritiesConstants {
 
     public static final String ANONYMOUS = "ROLE_ANONYMOUS";
 
-    private AuthoritiesConstants() {
-    }
 }

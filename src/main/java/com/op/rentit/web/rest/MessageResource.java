@@ -5,6 +5,7 @@ import com.op.rentit.domain.Message;
 import com.op.rentit.repository.MessageRepository;
 import com.op.rentit.repository.search.MessageSearchRepository;
 import com.op.rentit.web.rest.util.HeaderUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -26,18 +27,17 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 /**
  * REST controller for managing Message.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class MessageResource {
 
-    private final Logger log = LoggerFactory.getLogger(MessageResource.class);
-        
     @Inject
     private MessageRepository messageRepository;
-    
+
     @Inject
     private MessageSearchRepository messageSearchRepository;
-    
+
     /**
      * POST  /messages : Create a new message.
      *

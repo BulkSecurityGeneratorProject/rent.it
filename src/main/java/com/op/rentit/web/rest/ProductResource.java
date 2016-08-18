@@ -5,6 +5,7 @@ import com.op.rentit.domain.Product;
 import com.op.rentit.repository.ProductRepository;
 import com.op.rentit.repository.search.ProductSearchRepository;
 import com.op.rentit.web.rest.util.HeaderUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -26,18 +27,17 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 /**
  * REST controller for managing Product.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class ProductResource {
 
-    private final Logger log = LoggerFactory.getLogger(ProductResource.class);
-        
     @Inject
     private ProductRepository productRepository;
-    
+
     @Inject
     private ProductSearchRepository productSearchRepository;
-    
+
     /**
      * POST  /products : Create a new product.
      *

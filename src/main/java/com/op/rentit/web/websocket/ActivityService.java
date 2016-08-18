@@ -2,6 +2,7 @@ package com.op.rentit.web.websocket;
 
 import com.op.rentit.security.SecurityUtils;
 import com.op.rentit.web.websocket.dto.ActivityDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationListener;
@@ -24,10 +25,9 @@ import java.util.Calendar;
 
 import static com.op.rentit.config.WebsocketConfiguration.IP_ADDRESS;
 
+@Slf4j
 @Controller
 public class ActivityService implements ApplicationListener<SessionDisconnectEvent> {
-
-    private static final Logger log = LoggerFactory.getLogger(ActivityService.class);
 
     private DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 

@@ -2,6 +2,7 @@ package com.op.rentit.aop.logging;
 
 import com.op.rentit.config.Constants;
 
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -18,10 +19,9 @@ import java.util.Arrays;
 /**
  * Aspect for logging execution of service and repository Spring components.
  */
+@Slf4j
 @Aspect
 public class LoggingAspect {
-
-    private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Inject
     private Environment env;

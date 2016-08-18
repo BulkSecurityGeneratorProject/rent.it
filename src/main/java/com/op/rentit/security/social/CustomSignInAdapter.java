@@ -3,6 +3,7 @@ package com.op.rentit.security.social;
 import com.op.rentit.config.JHipsterProperties;
 import com.op.rentit.security.jwt.TokenProvider;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,10 +22,8 @@ import javax.servlet.http.Cookie;
 
 import javax.inject.Inject;
 
+@Slf4j
 public class CustomSignInAdapter implements SignInAdapter {
-
-    @SuppressWarnings("unused")
-    private final Logger log = LoggerFactory.getLogger(CustomSignInAdapter.class);
 
     @Inject
     private UserDetailsService userDetailsService;

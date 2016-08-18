@@ -5,6 +5,7 @@ import com.op.rentit.domain.Rate;
 import com.op.rentit.repository.RateRepository;
 import com.op.rentit.repository.search.RateSearchRepository;
 import com.op.rentit.web.rest.util.HeaderUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -26,18 +27,17 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 /**
  * REST controller for managing Rate.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class RateResource {
 
-    private final Logger log = LoggerFactory.getLogger(RateResource.class);
-        
     @Inject
     private RateRepository rateRepository;
-    
+
     @Inject
     private RateSearchRepository rateSearchRepository;
-    
+
     /**
      * POST  /rates : Create a new rate.
      *

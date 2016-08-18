@@ -5,6 +5,7 @@ import com.op.rentit.domain.AppSettings;
 import com.op.rentit.repository.AppSettingsRepository;
 import com.op.rentit.repository.search.AppSettingsSearchRepository;
 import com.op.rentit.web.rest.util.HeaderUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -26,18 +27,17 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 /**
  * REST controller for managing AppSettings.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class AppSettingsResource {
 
-    private final Logger log = LoggerFactory.getLogger(AppSettingsResource.class);
-        
     @Inject
     private AppSettingsRepository appSettingsRepository;
-    
+
     @Inject
     private AppSettingsSearchRepository appSettingsSearchRepository;
-    
+
     /**
      * POST  /app-settings : Create a new appSettings.
      *

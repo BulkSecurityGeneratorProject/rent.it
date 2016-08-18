@@ -2,6 +2,7 @@ package com.op.rentit.config;
 
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.LoggerContext;
+import lombok.extern.slf4j.Slf4j;
 import net.logstash.logback.appender.LogstashSocketAppender;
 import net.logstash.logback.stacktrace.ShortenedThrowableConverter;
 import org.slf4j.Logger;
@@ -12,10 +13,9 @@ import org.springframework.context.annotation.Configuration;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+@Slf4j
 @Configuration
 public class LoggingConfiguration {
-
-    private final Logger log = LoggerFactory.getLogger(LoggingConfiguration.class);
 
     private LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
 

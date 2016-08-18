@@ -5,6 +5,7 @@ import com.op.rentit.domain.Tag;
 import com.op.rentit.repository.TagRepository;
 import com.op.rentit.repository.search.TagSearchRepository;
 import com.op.rentit.web.rest.util.HeaderUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -26,18 +27,17 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 /**
  * REST controller for managing Tag.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class TagResource {
 
-    private final Logger log = LoggerFactory.getLogger(TagResource.class);
-        
     @Inject
     private TagRepository tagRepository;
-    
+
     @Inject
     private TagSearchRepository tagSearchRepository;
-    
+
     /**
      * POST  /tags : Create a new tag.
      *

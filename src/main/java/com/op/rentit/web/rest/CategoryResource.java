@@ -5,6 +5,7 @@ import com.op.rentit.domain.Category;
 import com.op.rentit.repository.CategoryRepository;
 import com.op.rentit.repository.search.CategorySearchRepository;
 import com.op.rentit.web.rest.util.HeaderUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -26,18 +27,17 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 /**
  * REST controller for managing Category.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class CategoryResource {
 
-    private final Logger log = LoggerFactory.getLogger(CategoryResource.class);
-        
     @Inject
     private CategoryRepository categoryRepository;
-    
+
     @Inject
     private CategorySearchRepository categorySearchRepository;
-    
+
     /**
      * POST  /categories : Create a new category.
      *

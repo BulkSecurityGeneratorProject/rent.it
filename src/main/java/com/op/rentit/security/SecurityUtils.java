@@ -1,5 +1,6 @@
 package com.op.rentit.security;
 
+import lombok.experimental.UtilityClass;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -12,10 +13,8 @@ import java.util.Collection;
 /**
  * Utility class for Spring Security.
  */
+@UtilityClass
 public final class SecurityUtils {
-
-    private SecurityUtils() {
-    }
 
     /**
      * Get the login of the current user.
