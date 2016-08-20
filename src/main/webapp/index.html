@@ -3,295 +3,601 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Working Bricks</title>
-    <meta name="google-site-verification" content="RR_k_66J9hPyzSYD5gplb_uh4vJKFd38Y8ADCPlGfnA" />
+    <title>Rent IT</title>
+    <meta name="google-site-verification" content="RR_k_66J9hPyzSYD5gplb_uh4vJKFd38Y8ADCPlGfnA"/>
     <meta name="description" content="">
     <meta name="google" value="notranslate">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css content/css/vendor.css -->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800'
+          rel='stylesheet' type='text/css'>
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
     <!-- endinject -->
-    <link rel="stylesheet" href="content/css/vendor.css">
+    <link rel="stylesheet" href="content/css/styles.css">
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/font-awesome.min.css">
+    <link rel="stylesheet" href="content/css/animate.css">
+    <link rel="stylesheet" href="content/css/templatemo_misc.css">
+    <link rel="stylesheet" href="content/css/templatemo_style.css">
     <!-- endbuild -->
-    <!-- build:css content/css/main.css -->
-    <link rel="stylesheet" href="content/css/main.css">
-    <!-- endbuild -->
+
+
 </head>
-<body ng-app="rentitApp" ng-strict-di>
+<body ng-app="rentitApp">
 
-<header class=""  style="background: url('/content/images/bg_1.jpg')
-9% top no-repeat; background-size:cover!important;"  />
-
-
-    <!--[if lt IE 9]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <page-ribbon></page-ribbon>
-    <div ui-view="navbar" ng-cloak></div>
-    <div class="container">
-        <div class="" ui-view="content">
-            <!-- Angular views -->
+<!-- header start -->
+<div id="templatemo_home_page">
+    <div class="templatemo_topbar">
+        <div class="container">
+            <div class="row">
+                <div class="templatemo_titlewrapper"><img src="content/images/templatemo_logobg.png" alt="logo background">
+                    <div class="templatemo_title"><span>Conquer</span></div>
+                </div>
+                <div class="clear"></div>
+                <div class="templatemo_titlewrappersmall">Conquer</div>
+                <nav class="navbar navbar-default templatemo_menu" role="navigation">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div id="top-menu">
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a class="menu" href="#templatemo_home_page">Home</a></li>
+                                    <li><a class="menu" href="#templatemo_service_page">Services</a></li>
+                                    <li><a class="menu" href="#templatemo_work_page">Projects</a></li>
+                                    <li><a class="menu" href="#templatemo_team_page">Our Team</a></li>
+                                    <li><a class="menu" href="#templatemo_contact_page">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+                <div class="clear"></div>
+            </div>
         </div>
-        <div ng-include="'footer.html'"></div>
     </div>
+    <div class="templatemo_headerimage">
+        <div class="flexslider">
+            <ul class="slides">
+                <li><img src="content/images/slider/1.jpg" alt="Slide 1"></li>
+                <li><img src="content/images/slider/2.jpg" alt="Slide 2"></li>
+                <li><img src="content/images/slider/3.jpg" alt="Slide 3"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="slider-caption">
+        <div class="templatemo_homewrapper">
+            <div class="templatemo_hometitle">Nam Condimentum</div>
+            <div class="templatemo_hometext">Mauris varius magna eu mauris. Nam ut dui. Nullam mollis, nulla nonummy commodo commodo, enim risus tincidunt tortor, sed pellentesque massa ante a tortor. Aliquam vitae nulla. Cras convallis urna id urna. Pellentesque nec orci a metus posuere tempus. Nulla molestie pretium purus.</div>
+            <div class="templatemo_homebutton"><a href="#">Continue</a></div>
+        </div>
+    </div>
+</div>
+<!-- header end -->
+<div class="clear"></div>
+<!-- service start -->
+<div class="templatemo_servicewrapper" id="templatemo_service_page">
+    <div class="container">
+        <div class="row">
+            <h1>Services</h1>
+            <div class="col-md-12 templatemo_marginbot">You can easily <strong>change icons</strong> by looking at guidelines from <a rel="nofollow" href="http://fontawesome.info/font-awesome-icon-world-map/">Font Awesome</a>. Example: <strong>&lt;i class=&quot;fa fa-camera&quot;&gt;&lt;/i&gt;</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam dapibus leo quis nisl. In lectus. Vivamus consectetuer pede in nisl. Mauris cursus pretium mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
+            <div class="col-md-3 col-sm-6">
+                <div class="templatemo_servicebox margin_bottom_1col margin_bottom_2col">
+                    <div class="templatemo_serviceicon"><span class="fa fa-pencil-square-o"></span></div>
+                    <div class="templatemo_service_title">Phasellus sed metus</div>
+                    <p>Donec euismod, justo sed convallis blandit, ipsum erat mattis lectus, vel pharetra neque enim tristique risus.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="templatemo_servicebox margin_bottom_1col margin_bottom_2col">
+                    <div class="templatemo_serviceicon"><span class="fa fa-home"></span></div>
+                    <div class="templatemo_service_title">Web Design</div>
+                    <p>Conquer is free HTML5 template by <span class="blue">template</span><span class="green">mo</span>. Feel free to download, edit and use this template for any purpose.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="templatemo_servicebox margin_bottom_1col">
+                    <div class="templatemo_serviceicon"><span class="fa fa-download"></span></div>
+                    <div class="templatemo_service_title">Free Download</div>
+                    <p>Credit goes to <a rel="nofollow" href="http://unsplash.com">Unsplash</a> for images used in this template. Curabitur rhoncus felis quis nibh pulvinar.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="templatemo_servicebox">
+                    <div class="templatemo_serviceicon"><span class="fa fa-random"></span></div>
+                    <div class="templatemo_service_title">Mobile Friendly</div>
+                    <p>Donec euismod, justo sed convallis blandit, ipsum erat mattis lectus, vel pharetra neque enim tristique risus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- service end -->
+<div class="clear"></div>
+<!-- work start -->
+<div class="templatemo_workwrapper" id="templatemo_work_page">
+    <div class="container">
+        <div class="row">
+            <h1>Current Projects</h1>
+            <div class="col-md-12 templatemo_workmargin">Donec leo sem, commodo in, bibendum iaculis, euismod vitae, risus. Suspendisse a erat id urna dapibus varius. Proin facilisis, nisi eget rutrum rutrum, sapien arcu molestie sem, eget gravida sapien nisi in ante.</div>
+        </div>
+    </div>
+    <div>
+        <div class="templatemo_workbox">
+            <div class="gallery-item"><img src="content/images/work/1.jpg" alt="work 1">
+                <div class="overlay">
+                    <div class="templatemo_worktitle">Project #001</div>
+                    <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
+                    <div class="templatemo_worklink"><a href="content/images/work/1.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="templatemo_workbox">
+            <div class="gallery-item"><img src="content/images/work/2.jpg" alt="work 2">
+                <div class="overlay">
+                    <div class="templatemo_worktitle">Project #002</div>
+                    <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
+                    <div class="templatemo_worklink"><a href="content/images/work/2.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="templatemo_workbox">
+            <div class="gallery-item"><img src="content/images/work/3.jpg" alt="work 3">
+                <div class="overlay">
+                    <div class="templatemo_worktitle">Project #003</div>
+                    <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
+                    <div class="templatemo_worklink"><a href="content/images/work/3.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="templatemo_workbox">
+            <div class="gallery-item"><img src="content/images/work/4.jpg" alt="work 4">
+                <div class="overlay">
+                    <div class="templatemo_worktitle">Project #004</div>
+                    <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
+                    <div class="templatemo_worklink"><a href="content/images/work/4.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="templatemo_workbox">
+            <div class="gallery-item"><img src="content/images/work/5.jpg" alt="work 5">
+                <div class="overlay">
+                    <div class="templatemo_worktitle">Project #005</div>
+                    <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
+                    <div class="templatemo_worklink"><a href="content/images/work/5.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="templatemo_workbox">
+            <div class="gallery-item"><img src="content/images/work/6.jpg" alt="work 6">
+                <div class="overlay">
+                    <div class="templatemo_worktitle">Project #006</div>
+                    <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
+                    <div class="templatemo_worklink"><a href="content/images/work/6.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="templatemo_workbox">
+            <div class="gallery-item"><img src="content/images/work/7.jpg" alt="work 7">
+                <div class="overlay">
+                    <div class="templatemo_worktitle">Project #007</div>
+                    <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
+                    <div class="templatemo_worklink"><a href="content/images/work/7.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="templatemo_workbox">
+            <div class="gallery-item"><img src="content/images/work/8.jpg" alt="work 8">
+                <div class="overlay">
+                    <div class="templatemo_worktitle">Project #008</div>
+                    <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
+                    <div class="templatemo_worklink"><a href="content/images/work/8.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--work end-->
+<div class="clear"></div>
+<!-- contact start -->
+<div class="templatemo_contactwrapper" id="templatemo_contact_page">
+    <div class="container">
+        <div class="row">
+            <h1>Contact</h1>
+        </div>
+    </div>
+    <div class="templatemo_contactmap">
+        <div id="templatemo_map"></div>
+    </div>
+    <div class="container templatemo_contactmargin">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="templatemo_address_title">Mailing Address:</div>
+                No 123, Duis in enim road, Sed sit amet arcu ut quam porttitor.
+                <div class="clear"></div>
+                <div class="templatemo_address_left">Call us:</div>
+                <div class="templatemo_address_right">+001 333 000 1010<br>
+                    +002 666 000 2020</div>
+                <div class="clear"></div>
+                <div class="templatemo_address_left">Hot line:</div>
+                <div class="templatemo_address_right">+009 000 999 0000</div>
+                <div class="clear"></div>
+                <div class="templatemo_address_left">Email us:</div>
+                <div class="templatemo_address_right">admin@company.com<br>
+                    info@company.com</div>
+            </div>
+            <form action="#" method="post">
+                <div class="col-md-9">
+                    <div class="col-md-4">
+                        <input type="text" name="name" id="name" class="name" placeholder="Your Name">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="email" id="email" class="email" placeholder="Your Email">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="subject" id="subject" class="subject" placeholder="Subject">
+                    </div>
+                    <div class="col-md-12">
+                        <textarea name="message" cols="1" rows="1" class="message" placeholder="Your message... " id="message"></textarea>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="submit" name="send" value="Send Message" id="submit" class="button templatemo_sendbtn">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- contact end -->
+<!-- footer start -->
+<div class="templatemo_footerwrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">Copyright &copy; 2084 <a href="#">Company Name</a> | Design: <a href="http://www.templatemo.com">templatemo</a></div>
+        </div>
+    </div>
+</div>
+<!-- footer end -->
+<script>
+    <!-- scroll to specific id when click on menu -->
+    // Cache selectors
+    var lastId,
+        topMenu = $("#top-menu"),
+        topMenuHeight = topMenu.outerHeight() + 15,
+    // All list items
+        menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+        scrollItems = menuItems.map(function() {
+            var item = $($(this).attr("href"));
+            if (item.length) {
+                return item;
+            }
+        });
+    // Bind click handler to menu items
+    // so we can get a fancy scroll animation
+    menuItems.click(function(e) {
+        var href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 300);
+        e.preventDefault();
+    });
+    // Bind to scroll
+    $(window).scroll(function() {
+        // Get container scroll position
+        var fromTop = $(this).scrollTop() + topMenuHeight;
+        // Get id of current scroll item
+        var cur = scrollItems.map(function() {
+            if ($(this).offset().top < fromTop)
+                return this;
+        });
+        // Get the id of the current element
+        cur = cur[cur.length - 1];
+        var id = cur && cur.length ? cur[0].id : "";
+        if (lastId !== id) {
+            lastId = id;
+            // Set/remove active class
+            menuItems
+                .parent().removeClass("active")
+                .end().filter("[href=#" + id + "]").parent().addClass("active");
+        }
+    });
+</script>
 
-    <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.-->
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-82388059-1');ga('send','pageview');
-    </script>
 
-    <!-- build:js app/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/messageformat/messageformat.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <script src="bower_components/sockjs-client/dist/sockjs.js"></script>
-    <script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
-    <script src="bower_components/ngstorage/ngStorage.js"></script>
-    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-translate/angular-translate.js"></script>
-    <script src="bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js"></script>
-    <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
-    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
-    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
-    <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
-    <!-- endinject -->
-    <!-- endbuild -->
 
-    <!-- build:js app/app.js  -->
-    <!-- inject:js -->
-    <script src="app/app.module.js"></script>
-    <script src="app/services/user/user.service.js"></script>
-    <script src="app/services/profiles/profile.service.js"></script>
-    <script src="app/services/profiles/page-ribbon.directive.js"></script>
-    <script src="app/services/auth/register.service.js"></script>
-    <script src="app/services/auth/principal.service.js"></script>
-    <script src="app/services/auth/password-reset-init.service.js"></script>
-    <script src="app/services/auth/password-reset-finish.service.js"></script>
-    <script src="app/services/auth/password.service.js"></script>
-    <script src="app/services/auth/has-authority.directive.js"></script>
-    <script src="app/services/auth/has-any-authority.directive.js"></script>
-    <script src="app/services/auth/auth.service.js"></script>
-    <script src="app/services/auth/auth.jwt.service.js"></script>
-    <script src="app/services/auth/activate.service.js"></script>
-    <script src="app/services/auth/account.service.js"></script>
-    <script src="app/layouts/navbar/navbar.controller.js"></script>
-    <script src="app/layouts/navbar/active-menu.directive.js"></script>
-    <script src="app/layouts/navbar/active-link.directive.js"></script>
-    <script src="app/layouts/error/error.state.js"></script>
-    <script src="app/home/home.state.js"></script>
-    <script src="app/home/home.controller.js"></script>
-    <script src="app/entities/wish-list/wish-list-dialog.controller.js"></script>
-    <script src="app/entities/wish-list/wish-list-detail.controller.js"></script>
-    <script src="app/entities/wish-list/wish-list-delete-dialog.controller.js"></script>
-    <script src="app/entities/wish-list/wish-list.state.js"></script>
-    <script src="app/entities/wish-list/wish-list.service.js"></script>
-    <script src="app/entities/wish-list/wish-list.search.service.js"></script>
-    <script src="app/entities/wish-list/wish-list.controller.js"></script>
-    <script src="app/entities/user-address/user-address-dialog.controller.js"></script>
-    <script src="app/entities/user-address/user-address-detail.controller.js"></script>
-    <script src="app/entities/user-address/user-address-delete-dialog.controller.js"></script>
-    <script src="app/entities/user-address/user-address.state.js"></script>
-    <script src="app/entities/user-address/user-address.service.js"></script>
-    <script src="app/entities/user-address/user-address.search.service.js"></script>
-    <script src="app/entities/user-address/user-address.controller.js"></script>
-    <script src="app/entities/time-slot/time-slot-dialog.controller.js"></script>
-    <script src="app/entities/time-slot/time-slot-detail.controller.js"></script>
-    <script src="app/entities/time-slot/time-slot-delete-dialog.controller.js"></script>
-    <script src="app/entities/time-slot/time-slot.state.js"></script>
-    <script src="app/entities/time-slot/time-slot.service.js"></script>
-    <script src="app/entities/time-slot/time-slot.search.service.js"></script>
-    <script src="app/entities/time-slot/time-slot.controller.js"></script>
-    <script src="app/entities/tag/tag-dialog.controller.js"></script>
-    <script src="app/entities/tag/tag-detail.controller.js"></script>
-    <script src="app/entities/tag/tag-delete-dialog.controller.js"></script>
-    <script src="app/entities/tag/tag.state.js"></script>
-    <script src="app/entities/tag/tag.service.js"></script>
-    <script src="app/entities/tag/tag.search.service.js"></script>
-    <script src="app/entities/tag/tag.controller.js"></script>
-    <script src="app/entities/rate/rate-dialog.controller.js"></script>
-    <script src="app/entities/rate/rate-detail.controller.js"></script>
-    <script src="app/entities/rate/rate-delete-dialog.controller.js"></script>
-    <script src="app/entities/rate/rate.state.js"></script>
-    <script src="app/entities/rate/rate.service.js"></script>
-    <script src="app/entities/rate/rate.search.service.js"></script>
-    <script src="app/entities/rate/rate.controller.js"></script>
-    <script src="app/entities/product-address/product-address-dialog.controller.js"></script>
-    <script src="app/entities/product-address/product-address-detail.controller.js"></script>
-    <script src="app/entities/product-address/product-address-delete-dialog.controller.js"></script>
-    <script src="app/entities/product-address/product-address.state.js"></script>
-    <script src="app/entities/product-address/product-address.service.js"></script>
-    <script src="app/entities/product-address/product-address.search.service.js"></script>
-    <script src="app/entities/product-address/product-address.controller.js"></script>
-    <script src="app/entities/product/product-dialog.controller.js"></script>
-    <script src="app/entities/product/product-detail.controller.js"></script>
-    <script src="app/entities/product/product-delete-dialog.controller.js"></script>
-    <script src="app/entities/product/product.state.js"></script>
-    <script src="app/entities/product/product.service.js"></script>
-    <script src="app/entities/product/product.search.service.js"></script>
-    <script src="app/entities/product/product.controller.js"></script>
-    <script src="app/entities/message/message-dialog.controller.js"></script>
-    <script src="app/entities/message/message-detail.controller.js"></script>
-    <script src="app/entities/message/message-delete-dialog.controller.js"></script>
-    <script src="app/entities/message/message.state.js"></script>
-    <script src="app/entities/message/message.service.js"></script>
-    <script src="app/entities/message/message.search.service.js"></script>
-    <script src="app/entities/message/message.controller.js"></script>
-    <script src="app/entities/image/image-dialog.controller.js"></script>
-    <script src="app/entities/image/image-detail.controller.js"></script>
-    <script src="app/entities/image/image-delete-dialog.controller.js"></script>
-    <script src="app/entities/image/image.state.js"></script>
-    <script src="app/entities/image/image.service.js"></script>
-    <script src="app/entities/image/image.search.service.js"></script>
-    <script src="app/entities/image/image.controller.js"></script>
-    <script src="app/entities/entity.state.js"></script>
-    <script src="app/entities/currency/currency-dialog.controller.js"></script>
-    <script src="app/entities/currency/currency-detail.controller.js"></script>
-    <script src="app/entities/currency/currency-delete-dialog.controller.js"></script>
-    <script src="app/entities/currency/currency.state.js"></script>
-    <script src="app/entities/currency/currency.service.js"></script>
-    <script src="app/entities/currency/currency.search.service.js"></script>
-    <script src="app/entities/currency/currency.controller.js"></script>
-    <script src="app/entities/country/country-dialog.controller.js"></script>
-    <script src="app/entities/country/country-detail.controller.js"></script>
-    <script src="app/entities/country/country-delete-dialog.controller.js"></script>
-    <script src="app/entities/country/country.state.js"></script>
-    <script src="app/entities/country/country.service.js"></script>
-    <script src="app/entities/country/country.search.service.js"></script>
-    <script src="app/entities/country/country.controller.js"></script>
-    <script src="app/entities/comment/comment-dialog.controller.js"></script>
-    <script src="app/entities/comment/comment-detail.controller.js"></script>
-    <script src="app/entities/comment/comment-delete-dialog.controller.js"></script>
-    <script src="app/entities/comment/comment.state.js"></script>
-    <script src="app/entities/comment/comment.service.js"></script>
-    <script src="app/entities/comment/comment.search.service.js"></script>
-    <script src="app/entities/comment/comment.controller.js"></script>
-    <script src="app/entities/category/category-dialog.controller.js"></script>
-    <script src="app/entities/category/category-detail.controller.js"></script>
-    <script src="app/entities/category/category-delete-dialog.controller.js"></script>
-    <script src="app/entities/category/category.state.js"></script>
-    <script src="app/entities/category/category.service.js"></script>
-    <script src="app/entities/category/category.search.service.js"></script>
-    <script src="app/entities/category/category.controller.js"></script>
-    <script src="app/entities/booking/booking-dialog.controller.js"></script>
-    <script src="app/entities/booking/booking-detail.controller.js"></script>
-    <script src="app/entities/booking/booking-delete-dialog.controller.js"></script>
-    <script src="app/entities/booking/booking.state.js"></script>
-    <script src="app/entities/booking/booking.service.js"></script>
-    <script src="app/entities/booking/booking.search.service.js"></script>
-    <script src="app/entities/booking/booking.controller.js"></script>
-    <script src="app/entities/app-settings/app-settings-dialog.controller.js"></script>
-    <script src="app/entities/app-settings/app-settings-detail.controller.js"></script>
-    <script src="app/entities/app-settings/app-settings-delete-dialog.controller.js"></script>
-    <script src="app/entities/app-settings/app-settings.state.js"></script>
-    <script src="app/entities/app-settings/app-settings.service.js"></script>
-    <script src="app/entities/app-settings/app-settings.search.service.js"></script>
-    <script src="app/entities/app-settings/app-settings.controller.js"></script>
-    <script src="app/components/util/truncate-words.filter.js"></script>
-    <script src="app/components/util/truncate-characters.filter.js"></script>
-    <script src="app/components/util/sort-by.directive.js"></script>
-    <script src="app/components/util/sort.directive.js"></script>
-    <script src="app/components/util/parse-links.service.js"></script>
-    <script src="app/components/util/pagination-util.service.js"></script>
-    <script src="app/components/util/jhi-item-count.directive.js"></script>
-    <script src="app/components/util/date-util.service.js"></script>
-    <script src="app/components/util/data-util.service.js"></script>
-    <script src="app/components/util/capitalize.filter.js"></script>
-    <script src="app/components/util/base64.service.js"></script>
-    <script src="app/components/login/login.service.js"></script>
-    <script src="app/components/login/login.controller.js"></script>
-    <script src="app/components/language/language.service.js"></script>
-    <script src="app/components/language/language.filter.js"></script>
-    <script src="app/components/language/language.controller.js"></script>
-    <script src="app/components/language/language.constants.js"></script>
-    <script src="app/components/form/show-validation.directive.js"></script>
-    <script src="app/components/form/pagination.constants.js"></script>
-    <script src="app/components/form/minbytes.directive.js"></script>
-    <script src="app/components/form/maxbytes.directive.js"></script>
-    <script src="app/components/alert/alert-error.directive.js"></script>
-    <script src="app/components/alert/alert.service.js"></script>
-    <script src="app/components/alert/alert.directive.js"></script>
-    <script src="app/blocks/interceptor/notification.interceptor.js"></script>
-    <script src="app/blocks/interceptor/errorhandler.interceptor.js"></script>
-    <script src="app/blocks/interceptor/auth-expired.interceptor.js"></script>
-    <script src="app/blocks/interceptor/auth.interceptor.js"></script>
-    <script src="app/blocks/handlers/translation.handler.js"></script>
-    <script src="app/blocks/handlers/state.handler.js"></script>
-    <script src="app/blocks/config/uib-pagination.config.js"></script>
-    <script src="app/blocks/config/uib-pager.config.js"></script>
-    <script src="app/blocks/config/translation-storage.provider.js"></script>
-    <script src="app/blocks/config/translation.config.js"></script>
-    <script src="app/blocks/config/localstorage.config.js"></script>
-    <script src="app/blocks/config/http.config.js"></script>
-    <script src="app/blocks/config/compile.config.js"></script>
-    <script src="app/blocks/config/alert.config.js"></script>
-    <script src="app/app.state.js"></script>
-    <script src="app/app.constants.js"></script>
-    <script src="app/admin/user-management/user-management-dialog.controller.js"></script>
-    <script src="app/admin/user-management/user-management-detail.controller.js"></script>
-    <script src="app/admin/user-management/user-management-delete-dialog.controller.js"></script>
-    <script src="app/admin/user-management/user-management.state.js"></script>
-    <script src="app/admin/user-management/user-management.controller.js"></script>
-    <script src="app/admin/tracker/tracker.state.js"></script>
-    <script src="app/admin/tracker/tracker.service.js"></script>
-    <script src="app/admin/tracker/tracker.controller.js"></script>
-    <script src="app/admin/metrics/metrics.state.js"></script>
-    <script src="app/admin/metrics/metrics.service.js"></script>
-    <script src="app/admin/metrics/metrics.modal.controller.js"></script>
-    <script src="app/admin/metrics/metrics.controller.js"></script>
-    <script src="app/admin/logs/logs.state.js"></script>
-    <script src="app/admin/logs/logs.service.js"></script>
-    <script src="app/admin/logs/logs.controller.js"></script>
-    <script src="app/admin/health/health.state.js"></script>
-    <script src="app/admin/health/health.service.js"></script>
-    <script src="app/admin/health/health.modal.controller.js"></script>
-    <script src="app/admin/health/health.controller.js"></script>
-    <script src="app/admin/docs/docs.state.js"></script>
-    <script src="app/admin/configuration/configuration.state.js"></script>
-    <script src="app/admin/configuration/configuration.service.js"></script>
-    <script src="app/admin/configuration/configuration.controller.js"></script>
-    <script src="app/admin/audits/audits.state.js"></script>
-    <script src="app/admin/audits/audits.service.js"></script>
-    <script src="app/admin/audits/audits.controller.js"></script>
-    <script src="app/admin/admin.state.js"></script>
-    <script src="app/account/social/social-register.controller.js"></script>
-    <script src="app/account/social/social-auth.controller.js"></script>
-    <script src="app/account/social/social.state.js"></script>
-    <script src="app/account/social/social.service.js"></script>
-    <script src="app/account/social/directive/social.directive.js"></script>
-    <script src="app/account/settings/settings.state.js"></script>
-    <script src="app/account/settings/settings.controller.js"></script>
-    <script src="app/account/reset/request/reset.request.state.js"></script>
-    <script src="app/account/reset/request/reset.request.controller.js"></script>
-    <script src="app/account/reset/finish/reset.finish.state.js"></script>
-    <script src="app/account/reset/finish/reset.finish.controller.js"></script>
-    <script src="app/account/register/register.state.js"></script>
-    <script src="app/account/register/register.controller.js"></script>
-    <script src="app/account/password/password-strength-bar.directive.js"></script>
-    <script src="app/account/password/password.state.js"></script>
-    <script src="app/account/password/password.controller.js"></script>
-    <script src="app/account/activate/activate.state.js"></script>
-    <script src="app/account/activate/activate.controller.js"></script>
-    <script src="app/account/account.state.js"></script>
-    <!-- endinject -->
-    <!-- endbuild -->
+
+
+<!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.-->
+<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-82388059-1');
+    ga('send', 'pageview');
+</script>
+
+<!-- build:js app/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/messageformat/messageformat.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<script src="bower_components/sockjs-client/dist/sockjs.js"></script>
+<script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+<script src="bower_components/ngstorage/ngStorage.js"></script>
+<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-translate/angular-translate.js"></script>
+<script
+    src="bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js"></script>
+<script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+<script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
+<script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+<script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+<!-- endinject -->
+
+<!-- JavaScripts -->
+<script src="content/js/jquery-1.11.1.min.js"></script>
+<script src="content/js/bootstrap-dropdown.js"></script>
+<script src="content/js/bootstrap-collapse.js"></script>
+<script src="content/js/bootstrap-tab.js"></script>
+<script src="content/js/jquery.singlePageNav.js"></script>
+<script src="content/js/jquery.flexslider.js"></script>
+<script src="content/js/custom.js"></script>
+<script src="content/js/jquery.lightbox.js"></script>
+<script src="content/js/templatemo_custom.js"></script>
+<script src="content/js/responsiveCarousel.min.js"></script>
+
+<!-- inject:js -->
+<script src="app/app.module.js"></script>
+<script src="app/services/user/user.service.js"></script>
+<script src="app/services/profiles/profile.service.js"></script>
+<script src="app/services/profiles/page-ribbon.directive.js"></script>
+<script src="app/services/auth/register.service.js"></script>
+<script src="app/services/auth/principal.service.js"></script>
+<script src="app/services/auth/password-reset-init.service.js"></script>
+<script src="app/services/auth/password-reset-finish.service.js"></script>
+<script src="app/services/auth/password.service.js"></script>
+<script src="app/services/auth/has-authority.directive.js"></script>
+<script src="app/services/auth/has-any-authority.directive.js"></script>
+<script src="app/services/auth/auth.service.js"></script>
+<script src="app/services/auth/auth.jwt.service.js"></script>
+<script src="app/services/auth/activate.service.js"></script>
+<script src="app/services/auth/account.service.js"></script>
+<script src="app/layouts/navbar/navbar.controller.js"></script>
+<script src="app/layouts/navbar/active-menu.directive.js"></script>
+<script src="app/layouts/navbar/active-link.directive.js"></script>
+<script src="app/layouts/error/error.state.js"></script>
+<script src="app/home/home.state.js"></script>
+<script src="app/home/home.controller.js"></script>
+<script src="app/entities/wish-list/wish-list-dialog.controller.js"></script>
+<script src="app/entities/wish-list/wish-list-detail.controller.js"></script>
+<script src="app/entities/wish-list/wish-list-delete-dialog.controller.js"></script>
+<script src="app/entities/wish-list/wish-list.state.js"></script>
+<script src="app/entities/wish-list/wish-list.service.js"></script>
+<script src="app/entities/wish-list/wish-list.search.service.js"></script>
+<script src="app/entities/wish-list/wish-list.controller.js"></script>
+<script src="app/entities/user-address/user-address-dialog.controller.js"></script>
+<script src="app/entities/user-address/user-address-detail.controller.js"></script>
+<script src="app/entities/user-address/user-address-delete-dialog.controller.js"></script>
+<script src="app/entities/user-address/user-address.state.js"></script>
+<script src="app/entities/user-address/user-address.service.js"></script>
+<script src="app/entities/user-address/user-address.search.service.js"></script>
+<script src="app/entities/user-address/user-address.controller.js"></script>
+<script src="app/entities/time-slot/time-slot-dialog.controller.js"></script>
+<script src="app/entities/time-slot/time-slot-detail.controller.js"></script>
+<script src="app/entities/time-slot/time-slot-delete-dialog.controller.js"></script>
+<script src="app/entities/time-slot/time-slot.state.js"></script>
+<script src="app/entities/time-slot/time-slot.service.js"></script>
+<script src="app/entities/time-slot/time-slot.search.service.js"></script>
+<script src="app/entities/time-slot/time-slot.controller.js"></script>
+<script src="app/entities/tag/tag-dialog.controller.js"></script>
+<script src="app/entities/tag/tag-detail.controller.js"></script>
+<script src="app/entities/tag/tag-delete-dialog.controller.js"></script>
+<script src="app/entities/tag/tag.state.js"></script>
+<script src="app/entities/tag/tag.service.js"></script>
+<script src="app/entities/tag/tag.search.service.js"></script>
+<script src="app/entities/tag/tag.controller.js"></script>
+<script src="app/entities/rate/rate-dialog.controller.js"></script>
+<script src="app/entities/rate/rate-detail.controller.js"></script>
+<script src="app/entities/rate/rate-delete-dialog.controller.js"></script>
+<script src="app/entities/rate/rate.state.js"></script>
+<script src="app/entities/rate/rate.service.js"></script>
+<script src="app/entities/rate/rate.search.service.js"></script>
+<script src="app/entities/rate/rate.controller.js"></script>
+<script src="app/entities/product-address/product-address-dialog.controller.js"></script>
+<script src="app/entities/product-address/product-address-detail.controller.js"></script>
+<script src="app/entities/product-address/product-address-delete-dialog.controller.js"></script>
+<script src="app/entities/product-address/product-address.state.js"></script>
+<script src="app/entities/product-address/product-address.service.js"></script>
+<script src="app/entities/product-address/product-address.search.service.js"></script>
+<script src="app/entities/product-address/product-address.controller.js"></script>
+<script src="app/entities/product/product-dialog.controller.js"></script>
+<script src="app/entities/product/product-detail.controller.js"></script>
+<script src="app/entities/product/product-delete-dialog.controller.js"></script>
+<script src="app/entities/product/product.state.js"></script>
+<script src="app/entities/product/product.service.js"></script>
+<script src="app/entities/product/product.search.service.js"></script>
+<script src="app/entities/product/product.controller.js"></script>
+<script src="app/entities/message/message-dialog.controller.js"></script>
+<script src="app/entities/message/message-detail.controller.js"></script>
+<script src="app/entities/message/message-delete-dialog.controller.js"></script>
+<script src="app/entities/message/message.state.js"></script>
+<script src="app/entities/message/message.service.js"></script>
+<script src="app/entities/message/message.search.service.js"></script>
+<script src="app/entities/message/message.controller.js"></script>
+<script src="app/entities/image/image-dialog.controller.js"></script>
+<script src="app/entities/image/image-detail.controller.js"></script>
+<script src="app/entities/image/image-delete-dialog.controller.js"></script>
+<script src="app/entities/image/image.state.js"></script>
+<script src="app/entities/image/image.service.js"></script>
+<script src="app/entities/image/image.search.service.js"></script>
+<script src="app/entities/image/image.controller.js"></script>
+<script src="app/entities/entity.state.js"></script>
+<script src="app/entities/currency/currency-dialog.controller.js"></script>
+<script src="app/entities/currency/currency-detail.controller.js"></script>
+<script src="app/entities/currency/currency-delete-dialog.controller.js"></script>
+<script src="app/entities/currency/currency.state.js"></script>
+<script src="app/entities/currency/currency.service.js"></script>
+<script src="app/entities/currency/currency.search.service.js"></script>
+<script src="app/entities/currency/currency.controller.js"></script>
+<script src="app/entities/country/country-dialog.controller.js"></script>
+<script src="app/entities/country/country-detail.controller.js"></script>
+<script src="app/entities/country/country-delete-dialog.controller.js"></script>
+<script src="app/entities/country/country.state.js"></script>
+<script src="app/entities/country/country.service.js"></script>
+<script src="app/entities/country/country.search.service.js"></script>
+<script src="app/entities/country/country.controller.js"></script>
+<script src="app/entities/comment/comment-dialog.controller.js"></script>
+<script src="app/entities/comment/comment-detail.controller.js"></script>
+<script src="app/entities/comment/comment-delete-dialog.controller.js"></script>
+<script src="app/entities/comment/comment.state.js"></script>
+<script src="app/entities/comment/comment.service.js"></script>
+<script src="app/entities/comment/comment.search.service.js"></script>
+<script src="app/entities/comment/comment.controller.js"></script>
+<script src="app/entities/category/category-dialog.controller.js"></script>
+<script src="app/entities/category/category-detail.controller.js"></script>
+<script src="app/entities/category/category-delete-dialog.controller.js"></script>
+<script src="app/entities/category/category.state.js"></script>
+<script src="app/entities/category/category.service.js"></script>
+<script src="app/entities/category/category.search.service.js"></script>
+<script src="app/entities/category/category.controller.js"></script>
+<script src="app/entities/booking/booking-dialog.controller.js"></script>
+<script src="app/entities/booking/booking-detail.controller.js"></script>
+<script src="app/entities/booking/booking-delete-dialog.controller.js"></script>
+<script src="app/entities/booking/booking.state.js"></script>
+<script src="app/entities/booking/booking.service.js"></script>
+<script src="app/entities/booking/booking.search.service.js"></script>
+<script src="app/entities/booking/booking.controller.js"></script>
+<script src="app/entities/app-settings/app-settings-dialog.controller.js"></script>
+<script src="app/entities/app-settings/app-settings-detail.controller.js"></script>
+<script src="app/entities/app-settings/app-settings-delete-dialog.controller.js"></script>
+<script src="app/entities/app-settings/app-settings.state.js"></script>
+<script src="app/entities/app-settings/app-settings.service.js"></script>
+<script src="app/entities/app-settings/app-settings.search.service.js"></script>
+<script src="app/entities/app-settings/app-settings.controller.js"></script>
+<script src="app/components/util/truncate-words.filter.js"></script>
+<script src="app/components/util/truncate-characters.filter.js"></script>
+<script src="app/components/util/sort-by.directive.js"></script>
+<script src="app/components/util/sort.directive.js"></script>
+<script src="app/components/util/parse-links.service.js"></script>
+<script src="app/components/util/pagination-util.service.js"></script>
+<script src="app/components/util/jhi-item-count.directive.js"></script>
+<script src="app/components/util/date-util.service.js"></script>
+<script src="app/components/util/data-util.service.js"></script>
+<script src="app/components/util/capitalize.filter.js"></script>
+<script src="app/components/util/base64.service.js"></script>
+<script src="app/components/login/login.service.js"></script>
+<script src="app/components/login/login.controller.js"></script>
+<script src="app/components/language/language.service.js"></script>
+<script src="app/components/language/language.filter.js"></script>
+<script src="app/components/language/language.controller.js"></script>
+<script src="app/components/language/language.constants.js"></script>
+<script src="app/components/form/show-validation.directive.js"></script>
+<script src="app/components/form/pagination.constants.js"></script>
+<script src="app/components/form/minbytes.directive.js"></script>
+<script src="app/components/form/maxbytes.directive.js"></script>
+<script src="app/components/alert/alert-error.directive.js"></script>
+<script src="app/components/alert/alert.service.js"></script>
+<script src="app/components/alert/alert.directive.js"></script>
+<script src="app/blocks/interceptor/notification.interceptor.js"></script>
+<script src="app/blocks/interceptor/errorhandler.interceptor.js"></script>
+<script src="app/blocks/interceptor/auth-expired.interceptor.js"></script>
+<script src="app/blocks/interceptor/auth.interceptor.js"></script>
+<script src="app/blocks/handlers/translation.handler.js"></script>
+<script src="app/blocks/handlers/state.handler.js"></script>
+<script src="app/blocks/config/uib-pagination.config.js"></script>
+<script src="app/blocks/config/uib-pager.config.js"></script>
+<script src="app/blocks/config/translation-storage.provider.js"></script>
+<script src="app/blocks/config/translation.config.js"></script>
+<script src="app/blocks/config/localstorage.config.js"></script>
+<script src="app/blocks/config/http.config.js"></script>
+<script src="app/blocks/config/compile.config.js"></script>
+<script src="app/blocks/config/alert.config.js"></script>
+<script src="app/app.state.js"></script>
+<script src="app/app.constants.js"></script>
+<script src="app/admin/user-management/user-management-dialog.controller.js"></script>
+<script src="app/admin/user-management/user-management-detail.controller.js"></script>
+<script src="app/admin/user-management/user-management-delete-dialog.controller.js"></script>
+<script src="app/admin/user-management/user-management.state.js"></script>
+<script src="app/admin/user-management/user-management.controller.js"></script>
+<script src="app/admin/tracker/tracker.state.js"></script>
+<script src="app/admin/tracker/tracker.service.js"></script>
+<script src="app/admin/tracker/tracker.controller.js"></script>
+<script src="app/admin/metrics/metrics.state.js"></script>
+<script src="app/admin/metrics/metrics.service.js"></script>
+<script src="app/admin/metrics/metrics.modal.controller.js"></script>
+<script src="app/admin/metrics/metrics.controller.js"></script>
+<script src="app/admin/logs/logs.state.js"></script>
+<script src="app/admin/logs/logs.service.js"></script>
+<script src="app/admin/logs/logs.controller.js"></script>
+<script src="app/admin/health/health.state.js"></script>
+<script src="app/admin/health/health.service.js"></script>
+<script src="app/admin/health/health.modal.controller.js"></script>
+<script src="app/admin/health/health.controller.js"></script>
+<script src="app/admin/docs/docs.state.js"></script>
+<script src="app/admin/configuration/configuration.state.js"></script>
+<script src="app/admin/configuration/configuration.service.js"></script>
+<script src="app/admin/configuration/configuration.controller.js"></script>
+<script src="app/admin/audits/audits.state.js"></script>
+<script src="app/admin/audits/audits.service.js"></script>
+<script src="app/admin/audits/audits.controller.js"></script>
+<script src="app/admin/admin.state.js"></script>
+<script src="app/account/social/social-register.controller.js"></script>
+<script src="app/account/social/social-auth.controller.js"></script>
+<script src="app/account/social/social.state.js"></script>
+<script src="app/account/social/social.service.js"></script>
+<script src="app/account/social/directive/social.directive.js"></script>
+<script src="app/account/settings/settings.state.js"></script>
+<script src="app/account/settings/settings.controller.js"></script>
+<script src="app/account/reset/request/reset.request.state.js"></script>
+<script src="app/account/reset/request/reset.request.controller.js"></script>
+<script src="app/account/reset/finish/reset.finish.state.js"></script>
+<script src="app/account/reset/finish/reset.finish.controller.js"></script>
+<script src="app/account/register/register.state.js"></script>
+<script src="app/account/register/register.controller.js"></script>
+<script src="app/account/password/password-strength-bar.directive.js"></script>
+<script src="app/account/password/password.state.js"></script>
+<script src="app/account/password/password.controller.js"></script>
+<script src="app/account/activate/activate.state.js"></script>
+<script src="app/account/activate/activate.controller.js"></script>
+<script src="app/account/account.state.js"></script>
+<!-- endinject -->
+<!-- endbuild -->
 
 </body>
 </html>
