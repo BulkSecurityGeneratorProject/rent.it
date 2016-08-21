@@ -13,7 +13,8 @@
           rel='stylesheet' type='text/css'>
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800'
+          rel='stylesheet' type='text/css'>
     <!-- endinject -->
     <link rel="stylesheet" href="content/css/styles.css">
     <link rel="stylesheet" href="content/css/bootstrap.min.css">
@@ -27,21 +28,27 @@
 </head>
 <body ng-app="rentitApp">
 
+<!---------------------------------------------------------------    Section 1 ----------------------------------------->
 <!-- header start -->
 <div id="templatemo_home_page">
+
     <div class="templatemo_topbar">
         <div class="container">
             <div class="row">
-                <div class="templatemo_titlewrapper"><img src="content/images/templatemo_logobg.png" alt="logo background">
-                    <div class="templatemo_title"><span>Conquer</span></div>
+                <div class="templatemo_titlewrapper"><img src="content/images/templatemo_logobg.png"
+                                                          alt="logo background">
+                    <div class="templatemo_title"><span>Rent It</span></div>
                 </div>
                 <div class="clear"></div>
-                <div class="templatemo_titlewrappersmall">Conquer</div>
+                <div class="templatemo_titlewrappersmall">Rent It</div>
                 <nav class="navbar navbar-default templatemo_menu" role="navigation">
                     <div class="container-fluid">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target="#bs-example-navbar-collapse-1"><span
+                                class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                                class="icon-bar"></span> <span class="icon-bar"></span></button>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div id="top-menu">
@@ -74,46 +81,72 @@
     </div>
     <div class="slider-caption">
         <div class="templatemo_homewrapper">
-            <div class="templatemo_hometitle">Nam Condimentum</div>
-            <div class="templatemo_hometext">Mauris varius magna eu mauris. Nam ut dui. Nullam mollis, nulla nonummy commodo commodo, enim risus tincidunt tortor, sed pellentesque massa ante a tortor. Aliquam vitae nulla. Cras convallis urna id urna. Pellentesque nec orci a metus posuere tempus. Nulla molestie pretium purus.</div>
-            <div class="templatemo_homebutton"><a href="#">Continue</a></div>
+            <div class="templatemo_hometitle">Rent It</div>
+
+            <form name="searchForm" class="form-inline">
+                <div class="form-group">
+
+                    <div class="form-group">
+                        <input type="search" class="search_input form-control " id="exampleInputEmail3"
+                               placeholder="{{ 'I need...' | translate }}">
+                        <button type="button" class="search_btn btn btn-danger " ng-click="vm.search(vm.searchQuery)">Search
+                            product
+                        </button>
+                    </div>
+                </div>
+            </form>
+
         </div>
     </div>
 </div>
 <!-- header end -->
+
+
+<!---------------------------------------------------------------    Section 2 ----------------------------------------->
+
 <div class="clear"></div>
 <!-- service start -->
 <div class="templatemo_servicewrapper" id="templatemo_service_page">
     <div class="container">
         <div class="row">
             <h1>Services</h1>
-            <div class="col-md-12 templatemo_marginbot">You can easily <strong>change icons</strong> by looking at guidelines from <a rel="nofollow" href="http://fontawesome.info/font-awesome-icon-world-map/">Font Awesome</a>. Example: <strong>&lt;i class=&quot;fa fa-camera&quot;&gt;&lt;/i&gt;</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam dapibus leo quis nisl. In lectus. Vivamus consectetuer pede in nisl. Mauris cursus pretium mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
+            <div class="col-md-12 templatemo_marginbot">You can easily <strong>change icons</strong> by looking at
+                guidelines from <a rel="nofollow" href="http://fontawesome.info/font-awesome-icon-world-map/">Font
+                    Awesome</a>. Example: <strong>&lt;i class=&quot;fa fa-camera&quot;&gt;&lt;/i&gt;</strong> Lorem
+                ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam dapibus leo quis nisl. In lectus. Vivamus
+                consectetuer pede in nisl. Mauris cursus pretium mauris. Pellentesque habitant morbi tristique senectus
+                et netus et malesuada fames ac turpis egestas.
+            </div>
             <div class="col-md-3 col-sm-6">
                 <div class="templatemo_servicebox margin_bottom_1col margin_bottom_2col">
                     <div class="templatemo_serviceicon"><span class="fa fa-pencil-square-o"></span></div>
                     <div class="templatemo_service_title">Phasellus sed metus</div>
-                    <p>Donec euismod, justo sed convallis blandit, ipsum erat mattis lectus, vel pharetra neque enim tristique risus.</p>
+                    <p>Donec euismod, justo sed convallis blandit, ipsum erat mattis lectus, vel pharetra neque enim
+                        tristique risus.</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="templatemo_servicebox margin_bottom_1col margin_bottom_2col">
                     <div class="templatemo_serviceicon"><span class="fa fa-home"></span></div>
                     <div class="templatemo_service_title">Web Design</div>
-                    <p>Conquer is free HTML5 template by <span class="blue">template</span><span class="green">mo</span>. Feel free to download, edit and use this template for any purpose.</p>
+                    <p>Conquer is free HTML5 template by <span class="blue">template</span><span class="green">mo</span>.
+                        Feel free to download, edit and use this template for any purpose.</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="templatemo_servicebox margin_bottom_1col">
                     <div class="templatemo_serviceicon"><span class="fa fa-download"></span></div>
                     <div class="templatemo_service_title">Free Download</div>
-                    <p>Credit goes to <a rel="nofollow" href="http://unsplash.com">Unsplash</a> for images used in this template. Curabitur rhoncus felis quis nibh pulvinar.</p>
+                    <p>Credit goes to <a rel="nofollow" href="http://unsplash.com">Unsplash</a> for images used in this
+                        template. Curabitur rhoncus felis quis nibh pulvinar.</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="templatemo_servicebox">
                     <div class="templatemo_serviceicon"><span class="fa fa-random"></span></div>
                     <div class="templatemo_service_title">Mobile Friendly</div>
-                    <p>Donec euismod, justo sed convallis blandit, ipsum erat mattis lectus, vel pharetra neque enim tristique risus.</p>
+                    <p>Donec euismod, justo sed convallis blandit, ipsum erat mattis lectus, vel pharetra neque enim
+                        tristique risus.</p>
                 </div>
             </div>
         </div>
@@ -121,12 +154,18 @@
 </div>
 <!-- service end -->
 <div class="clear"></div>
+
+<!---------------------------------------------------------------    Section 3 ----------------------------------------->
+
 <!-- work start -->
 <div class="templatemo_workwrapper" id="templatemo_work_page">
     <div class="container">
         <div class="row">
             <h1>Current Projects</h1>
-            <div class="col-md-12 templatemo_workmargin">Donec leo sem, commodo in, bibendum iaculis, euismod vitae, risus. Suspendisse a erat id urna dapibus varius. Proin facilisis, nisi eget rutrum rutrum, sapien arcu molestie sem, eget gravida sapien nisi in ante.</div>
+            <div class="col-md-12 templatemo_workmargin">Donec leo sem, commodo in, bibendum iaculis, euismod vitae,
+                risus. Suspendisse a erat id urna dapibus varius. Proin facilisis, nisi eget rutrum rutrum, sapien arcu
+                molestie sem, eget gravida sapien nisi in ante.
+            </div>
         </div>
     </div>
     <div>
@@ -135,7 +174,8 @@
                 <div class="overlay">
                     <div class="templatemo_worktitle">Project #001</div>
                     <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
-                    <div class="templatemo_worklink"><a href="content/images/work/1.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="content/images/work/1.jpg" data-rel="lightbox"
+                                                        class="fa fa-search-plus"></a></div>
                     <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
                 </div>
             </div>
@@ -145,7 +185,8 @@
                 <div class="overlay">
                     <div class="templatemo_worktitle">Project #002</div>
                     <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
-                    <div class="templatemo_worklink"><a href="content/images/work/2.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="content/images/work/2.jpg" data-rel="lightbox"
+                                                        class="fa fa-search-plus"></a></div>
                     <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
                 </div>
             </div>
@@ -155,7 +196,8 @@
                 <div class="overlay">
                     <div class="templatemo_worktitle">Project #003</div>
                     <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
-                    <div class="templatemo_worklink"><a href="content/images/work/3.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="content/images/work/3.jpg" data-rel="lightbox"
+                                                        class="fa fa-search-plus"></a></div>
                     <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
                 </div>
             </div>
@@ -165,7 +207,8 @@
                 <div class="overlay">
                     <div class="templatemo_worktitle">Project #004</div>
                     <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
-                    <div class="templatemo_worklink"><a href="content/images/work/4.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="content/images/work/4.jpg" data-rel="lightbox"
+                                                        class="fa fa-search-plus"></a></div>
                     <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
                 </div>
             </div>
@@ -175,7 +218,8 @@
                 <div class="overlay">
                     <div class="templatemo_worktitle">Project #005</div>
                     <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
-                    <div class="templatemo_worklink"><a href="content/images/work/5.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="content/images/work/5.jpg" data-rel="lightbox"
+                                                        class="fa fa-search-plus"></a></div>
                     <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
                 </div>
             </div>
@@ -185,7 +229,8 @@
                 <div class="overlay">
                     <div class="templatemo_worktitle">Project #006</div>
                     <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
-                    <div class="templatemo_worklink"><a href="content/images/work/6.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="content/images/work/6.jpg" data-rel="lightbox"
+                                                        class="fa fa-search-plus"></a></div>
                     <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
                 </div>
             </div>
@@ -195,7 +240,8 @@
                 <div class="overlay">
                     <div class="templatemo_worktitle">Project #007</div>
                     <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
-                    <div class="templatemo_worklink"><a href="content/images/work/7.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="content/images/work/7.jpg" data-rel="lightbox"
+                                                        class="fa fa-search-plus"></a></div>
                     <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
                 </div>
             </div>
@@ -205,7 +251,8 @@
                 <div class="overlay">
                     <div class="templatemo_worktitle">Project #008</div>
                     <div class="templatemo_workdes">Morbi et nisi in augue accumsan imperdiet</div>
-                    <div class="templatemo_worklink"><a href="content/images/work/8.jpg" data-rel="lightbox" class="fa fa-search-plus"></a></div>
+                    <div class="templatemo_worklink"><a href="content/images/work/8.jpg" data-rel="lightbox"
+                                                        class="fa fa-search-plus"></a></div>
                     <div class="templatemo_worklink"><a href="#" class="fa fa-link"></a></div>
                 </div>
             </div>
@@ -215,6 +262,9 @@
 <!--work end-->
 <div class="clear"></div>
 <!-- contact start -->
+
+<!---------------------------------------------------------------    Section 4 ----------------------------------------->
+
 <div class="templatemo_contactwrapper" id="templatemo_contact_page">
     <div class="container">
         <div class="row">
@@ -232,14 +282,16 @@
                 <div class="clear"></div>
                 <div class="templatemo_address_left">Call us:</div>
                 <div class="templatemo_address_right">+001 333 000 1010<br>
-                    +002 666 000 2020</div>
+                    +002 666 000 2020
+                </div>
                 <div class="clear"></div>
                 <div class="templatemo_address_left">Hot line:</div>
                 <div class="templatemo_address_right">+009 000 999 0000</div>
                 <div class="clear"></div>
                 <div class="templatemo_address_left">Email us:</div>
                 <div class="templatemo_address_right">admin@company.com<br>
-                    info@company.com</div>
+                    info@company.com
+                </div>
             </div>
             <form action="#" method="post">
                 <div class="col-md-9">
@@ -253,10 +305,12 @@
                         <input type="text" name="subject" id="subject" class="subject" placeholder="Subject">
                     </div>
                     <div class="col-md-12">
-                        <textarea name="message" cols="1" rows="1" class="message" placeholder="Your message... " id="message"></textarea>
+                        <textarea name="message" cols="1" rows="1" class="message" placeholder="Your message... "
+                                  id="message"></textarea>
                     </div>
                     <div class="col-md-4">
-                        <input type="submit" name="send" value="Send Message" id="submit" class="button templatemo_sendbtn">
+                        <input type="submit" name="send" value="Send Message" id="submit"
+                               class="button templatemo_sendbtn">
                     </div>
                 </div>
             </form>
@@ -264,14 +318,20 @@
     </div>
 </div>
 <!-- contact end -->
+
+<!---------------------------------------------------------------    Section 5 ----------------------------------------->
 <!-- footer start -->
 <div class="templatemo_footerwrapper">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">Copyright &copy; 2084 <a href="#">Company Name</a> | Design: <a href="http://www.templatemo.com">templatemo</a></div>
+            <div class="col-md-12">Copyright &copy; 2084 <a href="#">Company Name</a> | Design: <a
+                href="http://www.templatemo.com">templatemo</a></div>
         </div>
     </div>
 </div>
+
+
+
 <!-- footer end -->
 <script>
     <!-- scroll to specific id when click on menu -->
@@ -282,7 +342,7 @@
     // All list items
         menuItems = topMenu.find("a"),
     // Anchors corresponding to menu items
-        scrollItems = menuItems.map(function() {
+        scrollItems = menuItems.map(function () {
             var item = $($(this).attr("href"));
             if (item.length) {
                 return item;
@@ -290,7 +350,7 @@
         });
     // Bind click handler to menu items
     // so we can get a fancy scroll animation
-    menuItems.click(function(e) {
+    menuItems.click(function (e) {
         var href = $(this).attr("href"),
             offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
         $('html, body').stop().animate({
@@ -299,11 +359,11 @@
         e.preventDefault();
     });
     // Bind to scroll
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         // Get container scroll position
         var fromTop = $(this).scrollTop() + topMenuHeight;
         // Get id of current scroll item
-        var cur = scrollItems.map(function() {
+        var cur = scrollItems.map(function () {
             if ($(this).offset().top < fromTop)
                 return this;
         });
@@ -319,9 +379,6 @@
         }
     });
 </script>
-
-
-
 
 
 <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.-->
