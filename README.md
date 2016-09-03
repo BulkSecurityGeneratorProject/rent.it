@@ -25,6 +25,8 @@ https://mockingbot.com/workspace#apps/p73F8076A6D1471496443580
 2) Standalone
 mvn clean install
 
+mvn clean install -DskipTests
+
 # Run 
 1) with environment ***
 docker-compose -f src/main/docker/app.yml up
