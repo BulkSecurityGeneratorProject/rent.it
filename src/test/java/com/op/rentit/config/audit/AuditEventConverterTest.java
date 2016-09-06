@@ -1,9 +1,12 @@
 package com.op.rentit.config.audit;
 
+import com.op.rentit.domain.PersistentAuditEvent;
 import org.apache.commons.collections.map.HashedMap;
 import org.junit.Test;
+import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 
+import java.time.LocalDateTime;
 import java.util.Map;
 
 import static org.junit.Assert.*;
@@ -28,7 +31,39 @@ public class AuditEventConverterTest {
         assert(result.get("sessionId").equals("12345"));
     }
 
-    
-//    convertToAuditEvent
+    @Test
+    public void testThatWeCouldConvertDataToObjects() throws Exception {
+        Map<String, String> data = new HashedMap();
+        data.put("test", "null");
+        data.put("test2", "10");
+        Map result = auditEventConverter.convertDataToObjects(data);
+        assertEquals(result.get("test"),"null");
+        assertEquals(result.get("test2"),"10");
+    }
 
+    @Test
+    public void testThatWeCouldConvertToAuditEvent(){
+        PersistentAuditEvent event = new PersistentAuditEvent();
+        Map<String, String> data = new HashedMap();
+        data.put("test", "null");
+        event.setData(data);
+        event.setPrincipal("admin");
+        event.setAuditEventType("T1");
+        event.setAuditEventDate(LocalDateTime.now());
+        AuditEvent auditEvent = auditEventConverter.convertToAuditEvent(event);
+        assertEquals(auditEvent.getPrincipal(),"admin");
+    }
+
+    @Test
+    public void testThatWeCouldBatchConvertToAuditEvent(){
+        PersistentAuditEvent event = new PersistentAuditEvent();
+        Map<String, String> data = new HashedMap();
+        data.put("test", "null");
+        event.setData(data);
+        event.setPrincipal("admin");
+        event.setAuditEventType("T1");
+        event.setAuditEventDate(LocalDateTime.now());
+        AuditEvent auditEvent = auditEventConverter.convertToAuditEvent(event);
+        assertEquals(auditEvent.getPrincipal(),"admin");
+    }
 }
