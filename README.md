@@ -4,7 +4,10 @@ System for renting/lending anything you want.
 
 ## HTTP://WORKINGBRICKS.COM
 
-Livecoding.TV<img src="https://tools.livecoding.tv/badge/statusSmall/1/opastukhov?maxAge=25920" width="420" height="55"/>
+<a href="https://www.livecoding.tv/opastukhov/">
+    <img style="float: right;" src="https://tools.livecoding.tv/badge/statusSmall/1/opastukhov?maxAge=25920" width="420px" height="55px" />
+</a>
+Livecoding.TV
 
 [![GitHub release](https://img.shields.io/github/tag/picaro/rent.it.svg?maxAge=2592000)](https://github.com/picaro/rent.it/tags)
 [![Dependency Status](https://gemnasium.com/badges/github.com/WorkingBricks/rent.it.svg?maxAge=259200)](https://gemnasium.com/github.com/WorkingBricks/rent.it)
