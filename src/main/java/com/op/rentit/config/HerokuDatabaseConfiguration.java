@@ -1,6 +1,7 @@
 package com.op.rentit.config;
 
 import com.zaxxer.hikari.HikariDataSource;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
@@ -11,11 +12,10 @@ import org.springframework.context.annotation.*;
 
 import javax.sql.DataSource;
 
+@Slf4j
 @Configuration
 @Profile(Constants.SPRING_PROFILE_HEROKU)
 public class HerokuDatabaseConfiguration {
-
-    private final Logger log = LoggerFactory.getLogger(HerokuDatabaseConfiguration.class);
 
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.hikari")

@@ -1,5 +1,9 @@
 package com.op.rentit.config;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Constants {
 
     //Regex for acceptable logins
@@ -20,6 +24,4 @@ public final class Constants {
 
     public static final String IMG_BASE_DIR = "upload_img";
 
-    private Constants() {
-    }
 }

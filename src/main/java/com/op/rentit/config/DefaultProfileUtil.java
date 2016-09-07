@@ -1,11 +1,13 @@
 package com.op.rentit.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.core.io.ClassPathResource;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -15,11 +17,10 @@ import java.util.Properties;
  * when there is no <code>spring.profiles.active</code> set in the environment or as command line argument.
  * If the value is not available in <code>application.yml</code> then <code>dev</code> profile will be used as default.
  */
-public final class DefaultProfileUtil {
+@Slf4j
+public final class DefaultProfileUtil implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-
-    private static final Logger log = LoggerFactory.getLogger(DefaultProfileUtil.class);
+    private static final long serialVersionUID = -7723587054806088690L;
 
     private static final String SPRING_PROFILE_ACTIVE = "spring.profiles.active";
 
