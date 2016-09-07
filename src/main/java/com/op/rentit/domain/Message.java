@@ -1,5 +1,6 @@
 package com.op.rentit.domain;
 
+import lombok.Data;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -8,9 +9,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-/**
- * A Message.
- */
+@Data
 @Entity
 @Table(name = "message")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -76,32 +75,5 @@ public class Message implements Serializable {
         this.receiver = user;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Message message = (Message) o;
-        if(message.id == null || id == null) {
-            return false;
-        }
-        return Objects.equals(id, message.id);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(id);
-    }
-
-    @Override
-    public String toString() {
-        return "Message{" +
-            "id=" + id +
-            ", dateTime='" + dateTime + "'" +
-            ", text='" + text + "'" +
-            '}';
-    }
 }

@@ -1,5 +1,6 @@
 package com.op.rentit.domain;
 
+import lombok.Data;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -8,16 +9,14 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-/**
- * A WishList.
- */
+@Data
 @Entity
 @Table(name = "wish_list")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Document(indexName = "wishlist")
 public class WishList implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1577226239133882243L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,54 +29,4 @@ public class WishList implements Serializable {
     @JoinColumn(unique = true)
     private Product product;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        WishList wishList = (WishList) o;
-        if(wishList.id == null || id == null) {
-            return false;
-        }
-        return Objects.equals(id, wishList.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(id);
-    }
-
-    @Override
-    public String toString() {
-        return "WishList{" +
-            "id=" + id +
-            '}';
-    }
 }

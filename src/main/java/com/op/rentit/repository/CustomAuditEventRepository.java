@@ -3,6 +3,7 @@ package com.op.rentit.repository;
 import com.op.rentit.config.audit.AuditEventConverter;
 import com.op.rentit.domain.PersistentAuditEvent;
 
+import com.op.rentit.domain.util.JSR310DateConverters;
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.boot.actuate.audit.AuditEventRepository;
 import org.springframework.stereotype.Repository;
@@ -41,7 +42,8 @@ public class CustomAuditEventRepository implements AuditEventRepository {
             persistentAuditEvents = persistenceAuditEventRepository.findByPrincipal(principal);
         } else {
             persistentAuditEvents =
-                persistenceAuditEventRepository.findByPrincipalAndAuditEventDateAfter(principal, LocalDateTime.from(after.toInstant()));
+                persistenceAuditEventRepository.findByPrincipalAndAuditEventDateAfter(principal,
+                    JSR310DateConverters.DateToLocalDateTimeConverter.INSTANCE.convert(after));
         }
         return auditEventConverter.convertToAuditEvent(persistentAuditEvents);
     }
