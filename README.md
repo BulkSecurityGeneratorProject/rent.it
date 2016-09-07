@@ -5,7 +5,7 @@ System for renting/lending anything you want.
 ## HTTP://WORKINGBRICKS.COM
 
 <a href="https://www.livecoding.tv/opastukhov/">
-    <img style="float: right;" src="https://tools.livecoding.tv/badge/statusSmall/1/opastukhov?maxAge=25920" width="420px" height="55px" />
+    <img style="float: right; margin:auto; width:420px; height:20px ;display:block" src="https://tools.livecoding.tv/badge/statusSmall/1/opastukhov?maxAge=25920" />
 </a>
 Livecoding.TV
 
