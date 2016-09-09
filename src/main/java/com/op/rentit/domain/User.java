@@ -18,16 +18,13 @@ import java.util.Locale;
 import java.util.Set;
 import java.time.ZonedDateTime;
 
-/**
- * A user.
- */
 @Entity
 @Table(name = "jhi_user")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Document(indexName = "user")
 public class User extends AbstractAuditingEntity implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 6496549668335333782L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

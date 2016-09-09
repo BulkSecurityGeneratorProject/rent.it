@@ -2,11 +2,9 @@ package com.op.rentit.service;
 
 import com.op.rentit.config.JHipsterProperties;
 import com.op.rentit.domain.User;
-
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.CharEncoding;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.lang.WordUtils;
 import org.springframework.context.MessageSource;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -14,19 +12,11 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring4.SpringTemplateEngine;
-import org.apache.commons.lang.WordUtils;
-
 
 import javax.inject.Inject;
 import javax.mail.internet.MimeMessage;
 import java.util.Locale;
 
-/**
- * Service for sending e-mails.
- * <p>
- * We use the @Async annotation to send e-mails asynchronously.
- * </p>
- */
 @Slf4j
 @Service
 public class MailService {

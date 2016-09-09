@@ -15,10 +15,6 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring", uses = {})
 public interface UserMapper {
 
-    UserDTO userToUserDTO(User user);
-
-    List<UserDTO> usersToUserDTOs(List<User> users);
-
     @Mapping(target = "createdBy", ignore = true)
     @Mapping(target = "createdDate", ignore = true)
     @Mapping(target = "lastModifiedBy", ignore = true)
