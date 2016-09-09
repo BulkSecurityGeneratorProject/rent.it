@@ -55,7 +55,7 @@ security:
         enabled: false
 
 server:
-    port: 10344
+    port: 10345
     address: localhost
 
 # ===================================================================

@@ -5,15 +5,15 @@ import com.op.rentit.config.DefaultProfileUtil;
 import com.op.rentit.config.JHipsterProperties;
 
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.autoconfigure.*;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.env.Environment;
 
 import javax.annotation.PostConstruct;
@@ -24,7 +24,9 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @Slf4j
-@ComponentScan
+@Configuration
+@EnableAspectJAutoProxy
+@ComponentScan("com.op.rentit")
 @EnableAutoConfiguration(exclude = { MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class })
 @EnableConfigurationProperties({ JHipsterProperties.class, LiquibaseProperties.class })
 public class RentitApp {

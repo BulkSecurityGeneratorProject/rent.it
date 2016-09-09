@@ -14,6 +14,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.social.connect.*;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -31,7 +32,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = RentitApp.class)
-@WebAppConfiguration
+@WebIntegrationTest(randomPort = true)
 @IntegrationTest
 @Transactional
 public class SocialServiceIntTest {

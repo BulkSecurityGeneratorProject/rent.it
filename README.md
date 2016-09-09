@@ -4,11 +4,6 @@ System for renting/lending anything you want.
 
 ## HTTP://WORKINGBRICKS.COM
 
-<a href="https://www.livecoding.tv/opastukhov/">
-    <img  float="right" margin="auto" width="420px" height="20px" display="block" src="https://tools.livecoding.tv/badge/statusSmall/1/opastukhov?maxAge=25920" />
-</a>
-Livecoding.TV
-
 [![GitHub release](https://img.shields.io/github/tag/picaro/rent.it.svg?maxAge=2592000)](https://github.com/picaro/rent.it/tags)
 [![Dependency Status](https://gemnasium.com/badges/github.com/WorkingBricks/rent.it.svg?maxAge=259200)](https://gemnasium.com/github.com/WorkingBricks/rent.it)
 [![Code Climate](https://codeclimate.com/github/WorkingBricks/rent.it/badges/gpa.svg?maxAge=259200)](https://codeclimate.com/github/WorkingBricks/rent.it)
@@ -24,6 +19,9 @@ https://mockingbot.com/workspace#apps/p73F8076A6D1471496443580
 ** ASK form password
 
 ## Build
+
+* You should have 10% on drive free.
+
 1) With environment in the Docker
 ./mvnw clean package -Pprod docker:build
 
@@ -62,11 +60,8 @@ you could add custom metrics
 [![Coverage Status](https://coveralls.io/repos/github/WorkingBricks/rent.it/badge.svg?branch=master)](https://coveralls.io/github/WorkingBricks/rent.it?branch=master)
 [![codecov](https://codecov.io/gh/WorkingBricks/rent.it/branch/master/graph/badge.svg)](https://codecov.io/gh/WorkingBricks/rent.it)
 
-For 17.08.2016 by IDEA
-
-class	68% (103/150)	
-method  63% (503/797)	
-line    59% (1683/2849)
+For 8.09.2016 by IDEA
+class	74% / method  66% / line    62% 
 
 mvn clean test jacoco:report coveralls:report
 

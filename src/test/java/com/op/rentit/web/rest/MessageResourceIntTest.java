@@ -12,6 +12,7 @@ import static org.hamcrest.Matchers.hasItem;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.data.web.PageableHandlerMethodArgumentResolver;
@@ -36,6 +37,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  *
  * @see MessageResource
  */
+@Profile("dev")
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = RentitApp.class)
 @WebAppConfiguration
@@ -65,7 +67,7 @@ public class MessageResourceIntTest {
 
     @PostConstruct
     public void setup() {
-        MockitoAnnotations.initMocks(this);
+        //MockitoAnnotations.initMocks(this);
         MessageResource messageResource = new MessageResource();
         ReflectionTestUtils.setField(messageResource, "messageSearchRepository", messageSearchRepository);
         ReflectionTestUtils.setField(messageResource, "messageRepository", messageRepository);
