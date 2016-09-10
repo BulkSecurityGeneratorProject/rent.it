@@ -60,8 +60,8 @@ you could add custom metrics
 [![Coverage Status](https://coveralls.io/repos/github/WorkingBricks/rent.it/badge.svg?branch=master)](https://coveralls.io/github/WorkingBricks/rent.it?branch=master)
 [![codecov](https://codecov.io/gh/WorkingBricks/rent.it/branch/master/graph/badge.svg)](https://codecov.io/gh/WorkingBricks/rent.it)
 
-For 9.09.2016 by IDEA
-class	75% / method  68% / line    65% 
+For 11.09.2016 by IDEA
+class	76% / method  70% / line  70% 
 
 mvn clean test jacoco:report coveralls:report -P env-dev,dev
 

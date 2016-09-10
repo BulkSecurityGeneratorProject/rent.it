@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.inject.Inject;
 import javax.mail.internet.MimeMessage;
 
-import static com.op.rentit.web.rest.TestsHelper.fakeUser;
+import static com.op.rentit.web.rest.TestUtil.fakeUser;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyObject;
