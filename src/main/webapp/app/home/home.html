@@ -1,17 +1,14 @@
 <div ng-cloak>
     <div class="row">
-        <div class="container-fluid">
-            <div class="slogan">
-                <h1>Let your stuff work for you!</h1>
-            </div>
+        <div class="container search_form">
 
             <div class="">
                 <form name="searchForm" class="form-inline">
                     <div class="search-group">
                         <div class="input-search-prod">
-                            <input type="text" class="search-input" ng-model="vm.searchQuery"
+                            <input type="text" class=" search_input search-input" ng-model="vm.searchQuery"
                                    id="searchQuery" placeholder="{{ 'I need...' | translate }}">
-                            <button class="search-product-button" ng-click="vm.search(vm.searchQuery)">
+                            <button class="btn btn-lg active btn-success" ng-click="vm.search(vm.searchQuery)">
                                 Search product
                             </button>
                         </div>

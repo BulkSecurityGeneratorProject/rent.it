@@ -7987,6 +7987,18 @@ button.close {
     }
 }
 
+.search_form{
+    max-width: 100%;
+    margin: 28% 0 0 30%;
+}
+.search_input{
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    width: 400px;
+}
 /* endinject */
 /* bower:sass */
 /* endinject */
