@@ -1402,7 +1402,8 @@ body {
     font-size: 14px;
     line-height: 1.42857;
     color: #333333;
-    background-image: url(/webapp/content/images/interior-design.jpg);
+    background-image: url(../images/interior-design.jpg);
+    background-size: cover;
 }
 
 input,
